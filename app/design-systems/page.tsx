@@ -13,7 +13,7 @@ const imgLinkExternal = '/design-systems/icon-link-external.svg'
 // ─── Feature box ─────────────────────────────────────────────────────────────
 function FeatureBox({ iconSrc, title, description }: { iconSrc: string; title: string; description: string }) {
   return (
-    <div className="flex-1 min-w-0 border border-[rgba(0,0,0,0.08)] rounded-[6px] p-3 flex flex-col gap-3 self-stretch">
+    <div className="flex-1 min-w-0 border border-[var(--color-system-border)] rounded-[6px] p-3 flex flex-col gap-3 self-stretch">
       <div className="w-8 h-8 rounded-[6px] bg-[rgba(0,163,246,0.12)] flex items-center justify-center">
         <img src={iconSrc} alt="" className="w-6 h-6" />
       </div>
@@ -60,7 +60,7 @@ interface DSCardProps {
 
 function DesignSystemCard({ title, description, comingSoon, notionHref, caseStudyHref }: DSCardProps) {
   return (
-    <div className={`relative bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 w-full flex flex-col gap-5${comingSoon ? ' opacity-50' : ''}`}>
+    <div className={`relative bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 w-full flex flex-col gap-5${comingSoon ? ' opacity-50' : ''}`}>
       {/* Header row */}
       <div className="flex items-center justify-between gap-4">
         <p className="text-[18px] leading-[26px] font-bold text-[var(--color-text-primary)]">{title}</p>
@@ -89,7 +89,7 @@ function DesignSystemCard({ title, description, comingSoon, notionHref, caseStud
               href={notionHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 border border-[rgba(0,0,0,0.08)] px-4 py-2 rounded-[4px] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] hover:bg-[var(--color-system-background)] transition-colors duration-[150ms] whitespace-nowrap"
+              className="flex items-center gap-3 border border-[var(--color-system-border)] px-4 py-2 rounded-[4px] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] hover:bg-[var(--color-system-background)] transition-colors duration-[150ms] whitespace-nowrap"
             >
               View in Notion
               <span className="opacity-60 flex items-center">
@@ -100,7 +100,7 @@ function DesignSystemCard({ title, description, comingSoon, notionHref, caseStud
           {caseStudyHref && (
             <a
               href={caseStudyHref}
-              className="flex items-center gap-3 border border-[rgba(0,0,0,0.08)] px-4 py-2 rounded-[4px] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] hover:bg-[var(--color-system-background)] transition-colors duration-[150ms] whitespace-nowrap"
+              className="flex items-center gap-3 border border-[var(--color-system-border)] px-4 py-2 rounded-[4px] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] hover:bg-[var(--color-system-background)] transition-colors duration-[150ms] whitespace-nowrap"
             >
               Read case study
             </a>

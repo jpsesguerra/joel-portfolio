@@ -45,7 +45,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 items-stretch">
 
             {/* Hero card — spans 2 columns on desktop */}
-            <div className="lg:col-span-2 rounded-[6px] border border-[rgba(0,0,0,0.08)] overflow-hidden flex flex-col justify-between relative lg:h-[588px]">
+            <div className="lg:col-span-2 rounded-[6px] border border-[var(--color-system-border)] overflow-hidden flex flex-col justify-between relative lg:h-[588px]">
               <img
                 src={imgHeroBg}
                 alt=""
@@ -71,13 +71,13 @@ export default function Home() {
                 <div className="flex items-center gap-[10px] mt-1">
                   <a
                     href="/case-studies"
-                    className="flex items-center justify-center px-3 py-[7px] rounded-[4px] bg-[var(--color-brand-primary)] border border-[rgba(0,0,0,0.08)] font-mono text-[14px] leading-[22px] uppercase text-white whitespace-nowrap"
+                    className="flex items-center justify-center px-3 py-[7px] rounded-[4px] bg-[var(--color-brand-primary)] border border-[var(--color-system-border)] font-mono text-[14px] leading-[22px] uppercase text-white whitespace-nowrap"
                   >
                     Case Studies
                   </a>
                   <a
                     href="mailto:jpsesguerra@gmail.com"
-                    className="flex items-center gap-3 px-4 py-2 rounded-[4px] border border-[rgba(0,0,0,0.08)] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] whitespace-nowrap"
+                    className="flex items-center gap-3 px-4 py-2 rounded-[4px] border border-[var(--color-system-border)] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] whitespace-nowrap"
                   >
                     Let&apos;s Connect
                     <img src={imgLinkIcon} alt="" className="w-5 h-5 opacity-60" />
@@ -85,7 +85,7 @@ export default function Home() {
                 </div>
               </div>
               {/* Tech stack scrolling ticker */}
-              <div className="relative z-20 border-t border-[rgba(0,0,0,0.08)] px-8 pt-4 pb-6 overflow-hidden">
+              <div className="relative z-20 border-t border-[var(--color-system-border)] px-8 pt-4 pb-6 overflow-hidden">
                 <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-tertiary)] mb-1">TECH STACK:</p>
                 <div className="overflow-hidden">
                   <div
@@ -103,8 +103,8 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right column: Work Experience + DS Card — stacked on desktop, side-by-side on tablet */}
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
+            {/* Right column: Work Experience + DS Card — always stacked */}
+            <div className="grid grid-cols-1 gap-3">
 
               {/* Work Experience carousel */}
               <div className="flex flex-col h-[280px]">
@@ -122,7 +122,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 
             {/* Card 1 — Stats-based (Milk Moovement) */}
-            <a href="/case-studies/mm-ia" className="flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+            <a href="/case-studies/mm-ia" className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
@@ -154,11 +154,11 @@ export default function Home() {
             </a>
 
             {/* Card 2 — Procare case study image */}
-            <a href="/case-studies/procare-curriculum" className="flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+            <a href="/case-studies/procare-curriculum" className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
-              <div className="flex items-center justify-center overflow-hidden rounded-[6px] bg-[#f8fafd] h-[184px]">
+              <div className="flex items-center justify-center overflow-hidden rounded-[6px] bg-[var(--color-system-background-02)] h-[184px]">
                 <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1780436157/01_PC-Header_fz46uj.png" alt="Procare case study" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col gap-3">
@@ -177,11 +177,11 @@ export default function Home() {
             </a>
 
             {/* Card 3 — Third case study */}
-            <div className="flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5">
+            <div className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
-              <div className="flex items-center justify-center h-[184px] overflow-hidden rounded-[6px] bg-[#f8fafd]">
+              <div className="flex items-center justify-center h-[184px] overflow-hidden rounded-[6px] bg-[var(--color-system-background-02)]">
                 <video autoPlay muted loop playsInline className="w-full h-full object-contain">
                   <source src="https://res.cloudinary.com/du0witbcr/video/upload/v1780439788/617076a6ef5d8c80966934a6_Engagement_Video_xnnyrt.mp4" type="video/mp4" />
                 </video>

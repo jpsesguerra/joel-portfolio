@@ -85,15 +85,15 @@ export function SideNav() {
 function IdentityBlock({ collapsed }: { collapsed: boolean }) {
   if (collapsed) {
     return (
-      <div className="flex justify-center pt-4 pb-3">
+      <a href="/" className="flex justify-center pt-4 pb-3 hover:opacity-80 transition-opacity duration-[150ms]">
         <div className="w-8 h-8 rounded-[3.2px] overflow-hidden">
           <img src={JOEL_LOGO} alt="Joel Esguerra" className="w-full h-full object-cover" />
         </div>
-      </div>
+      </a>
     )
   }
   return (
-    <div className="flex items-center gap-[9px] px-3 py-4 border-b border-[var(--color-system-border)]">
+    <a href="/" className="flex items-center gap-[9px] px-3 py-4 border-b border-[var(--color-system-border)] hover:bg-[var(--color-system-white)] transition-colors duration-[150ms]">
       <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-[4px] lg:rounded-[4.8px] overflow-hidden flex-shrink-0">
         <img src={JOEL_LOGO} alt="Joel Esguerra" className="w-full h-full object-cover" />
       </div>
@@ -101,7 +101,7 @@ function IdentityBlock({ collapsed }: { collapsed: boolean }) {
         <p className="text-[20px] leading-[28px] text-[var(--color-text-primary)] font-bold">Joel Esguerra</p>
         <p className="text-[12px] leading-[18px] font-mono text-[var(--color-text-secondary)] uppercase">SR.Product Designer</p>
       </div>
-    </div>
+    </a>
   )
 }
 

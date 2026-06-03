@@ -47,7 +47,7 @@ export default function AIProjects() {
                 </div>
               )
               const isComingSoon = !project.href
-              const cardClass = `relative flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]${isComingSoon ? ' opacity-60' : ''}`
+              const cardClass = `relative flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]${isComingSoon ? ' opacity-60' : ''}`
               const badge = isComingSoon ? (
                 <span className="absolute top-4 right-4 font-mono text-[10px] leading-[14px] uppercase tracking-wide text-[var(--color-system-text-secondary)] bg-[var(--color-system-background)] border border-[rgba(0,0,0,0.10)] px-2 py-1 rounded-full">
                   Coming soon

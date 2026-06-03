@@ -213,7 +213,7 @@ export default function MooveCaseStudy() {
 
               {/* Metadata row — below hero image, above stats */}
               <FadeUp delay={0.2}>
-                <div className="flex gap-12 py-8 border-t border-[var(--color-system-border)]">
+                <div className="flex flex-col md:flex-row gap-12 py-8 border-t border-[var(--color-system-border)]">
                   {META.map(({ label, value }) => (
                     <div key={label} className="flex flex-col gap-1.5 flex-1 min-w-0">
                       <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-system-text-secondary)]">{label}</p>
@@ -231,7 +231,7 @@ export default function MooveCaseStudy() {
             whileInView="visible"
             viewport={viewOpts}
             variants={stagger}
-            className="grid grid-cols-4 px-10 gap-4 py-8 border-b border-[var(--color-system-border)]"
+            className="grid grid-cols-2 md:grid-cols-4 px-4 md:px-10 gap-4 py-8 border-b border-[var(--color-system-border)]"
           >
             {STATS.map((stat, i) => (
               <motion.div
@@ -251,7 +251,7 @@ export default function MooveCaseStudy() {
           </motion.div>
 
           {/* ── Body: Chapters + Sections ─────────────────────────────── */}
-          <div className="px-10 py-10">
+          <div className="px-4 py-6 md:px-10 md:py-10">
             <div className="max-w-[960px] mx-auto flex gap-10 items-start">
             <Chapters items={CHAPTERS} />
 
@@ -586,7 +586,7 @@ export default function MooveCaseStudy() {
                 <FadeUp className="mb-6">
                   <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-xl overflow-hidden">
                     {/* Chapter header */}
-                    <div className="flex gap-6 items-start px-10 py-7 border-b border-[var(--color-system-border)]">
+                    <div className="flex flex-col md:flex-row gap-6 items-start px-4 md:px-10 py-7 border-b border-[var(--color-system-border)]">
                       <span className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-brand-primary)] bg-[var(--color-brand-primary-surface)] px-2 py-1 rounded shrink-0">Design 01</span>
                       <div className="flex flex-col gap-1.5">
                         <h3 className="text-[20px] leading-[28px] font-bold text-[var(--color-system-text-primary)]">Constraints — Plant Demand, Plant Profile &amp; Bay Management</h3>
@@ -596,7 +596,7 @@ export default function MooveCaseStudy() {
                     {/* Chapter body */}
                     <div className="flex flex-col gap-10 p-10">
                       {/* Plant Demand Page */}
-                      <div className="flex gap-8 items-start">
+                      <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1 min-w-0 flex flex-col gap-4">
                           <h4 className="text-[18px] leading-[26px] font-bold text-[var(--color-brand-primary)]">Plant Demand Page</h4>
                           <div className="flex flex-col gap-4 text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">
@@ -638,7 +638,7 @@ export default function MooveCaseStudy() {
                         </div>
                       </div>
                       {/* Bay Management */}
-                      <div className="flex gap-8 items-start">
+                      <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1 min-w-0 flex flex-col gap-4">
                           <h4 className="text-[18px] leading-[26px] font-bold text-[var(--color-brand-primary)]">Bay Management</h4>
                           <div className="flex flex-col gap-4 text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">
@@ -661,7 +661,7 @@ export default function MooveCaseStudy() {
                 {/* ── Design 02 ── */}
                 <FadeUp className="mb-6">
                   <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-xl overflow-hidden">
-                    <div className="flex gap-6 items-start px-10 py-7 border-b border-[var(--color-system-border)]">
+                    <div className="flex flex-col md:flex-row gap-6 items-start px-4 md:px-10 py-7 border-b border-[var(--color-system-border)]">
                       <span className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-brand-primary)] bg-[var(--color-brand-primary-surface)] px-2 py-1 rounded shrink-0">Design 02</span>
                       <div className="flex flex-col gap-1.5">
                         <h3 className="text-[20px] leading-[28px] font-bold text-[var(--color-system-text-primary)]">Optimization Criteria — Designing Meaningful AI Control</h3>
@@ -680,7 +680,7 @@ export default function MooveCaseStudy() {
                         <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">I worked closely with data engineers and AI architects to understand precisely what each criterion was doing — not to expose the math, but to surface the right information at the right moment for users to make meaningful decisions.</p>
                       </div>
                       {/* 3 criteria cards */}
-                      <div className="flex gap-4">
+                      <div className="flex flex-col sm:flex-row gap-4">
                         {[
                           { color: 'var(--color-brand-primary)', label: 'CRITERIA 01', title: 'Route Cost',          desc: 'The algorithm evaluates hauling contracts between each producer-hauler-processor combination and calculates cost based on distance traveled. It finds the assignment that minimizes total contract cost across the full schedule — accounting for which haulers have contracts with which co-ops.' },
                           { color: '#6aaa78',                    label: 'CRITERIA 02', title: 'Distance',            desc: 'Stripped of contract pricing, this finds the producer-hauler-processor combination that minimizes total route distance — including multi-pickup routes where one hauler collects from several farms before a single drop-off.' },
@@ -695,7 +695,7 @@ export default function MooveCaseStudy() {
                         ))}
                       </div>
                       {/* Weighted system */}
-                      <div className="flex gap-8 items-start">
+                      <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1 min-w-0 flex flex-col gap-4">
                           <h4 className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">The Weighted Percentage System</h4>
                           <div className="flex flex-col gap-4 text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">
@@ -723,7 +723,7 @@ export default function MooveCaseStudy() {
                 {/* ── Design 03 ── */}
                 <FadeUp>
                   <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-xl overflow-hidden">
-                    <div className="flex gap-6 items-start px-10 py-7 border-b border-[var(--color-system-border)]">
+                    <div className="flex flex-col md:flex-row gap-6 items-start px-4 md:px-10 py-7 border-b border-[var(--color-system-border)]">
                       <span className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-brand-primary)] bg-[var(--color-brand-primary-surface)] px-2 py-1 rounded shrink-0">Design 03</span>
                       <div className="flex flex-col gap-1.5">
                         <h3 className="text-[20px] leading-[28px] font-bold text-[var(--color-system-text-primary)]">Scheduling Interface — A Mini Case Study Within the Case Study</h3>
@@ -760,7 +760,7 @@ export default function MooveCaseStudy() {
                         afterAlt="New list-based scheduling UI"
                       />
                       {/* 3 benefit cards */}
-                      <div className="flex gap-4">
+                      <div className="flex flex-col sm:flex-row gap-4">
                         {[
                           { icon: imgIconSpeed,     bg: 'var(--color-brand-lagoon-surface)', title: 'Performance',          desc: 'Renders hundreds of routes per client without degradation. CDI\'s 850+ weekly loads became manageable at a glance.' },
                           { icon: imgIconCheckList, bg: 'var(--color-brand-lagoon-surface)', title: 'Bulk Operations',       desc: 'True bulk selection, inline editing, column-based filtering and sorting — things the card view couldn\'t support before.' },
@@ -780,7 +780,7 @@ export default function MooveCaseStudy() {
                         <img src={imgPlantList} alt="Plant list scheduling view" className="w-full" />
                       </div>
                       {/* AI Design Principles */}
-                      <div className="flex gap-8 items-start">
+                      <div className="flex flex-col md:flex-row gap-8 items-start">
                         <div className="flex-1 min-w-0 flex flex-col gap-3">
                           <h4 className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">AI Design Principles Applied</h4>
                           {[

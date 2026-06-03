@@ -118,7 +118,7 @@ export default function ProcareCurriculumCaseStudy() {
           </div>
 
           {/* ── Body: Chapters + Sections ─────────────────────────────────── */}
-          <div className="px-10 py-10">
+          <div className="px-4 py-6 md:px-10 md:py-10">
             <div className="max-w-[960px] mx-auto flex gap-10 items-start">
             <Chapters items={CHAPTERS} />
 
@@ -152,14 +152,14 @@ export default function ProcareCurriculumCaseStudy() {
 
                 {/* Meta row */}
                 <FadeUp delay={0.15} className="mb-6">
-                  <div className="border-t border-[var(--color-system-border)] pt-6 flex gap-4">
+                  <div className="border-t border-[var(--color-system-border)] pt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
                       { label: 'ROLE',     value: 'Senior Product Designer' },
                       { label: 'TIMELINE', value: 'Sep 2021 – Oct 2022' },
                       { label: 'PLATFORM', value: 'Web, iOS, Android' },
                       { label: 'TOOLS',    value: 'Figma, Pendo, UserTesting, Intercom' },
                     ].map(({ label, value }) => (
-                      <div key={label} className="flex-1 min-w-0 bg-[#f8fafd] border border-[rgba(0,0,0,0.08)] rounded-[8px] px-5 py-4 flex flex-col gap-1">
+                      <div key={label} className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[8px] px-5 py-4 flex flex-col gap-1">
                         <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-system-text-secondary)]">{label}</p>
                         <p className="text-[14px] leading-[20px] font-medium text-[var(--color-system-text-primary)]">{value}</p>
                       </div>
@@ -169,7 +169,7 @@ export default function ProcareCurriculumCaseStudy() {
 
                 {/* 3 KPI Result Cards */}
                 <FadeUp delay={0.2}>
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <ResultCard metric="$20M"   label="ARR Pipeline Generated" subLabel="New revenue directly attributed to the curriculum and assessment product line" />
                     <ResultCard metric="1,600+" label="Schools Enrolled"        subLabel="In the first year post-launch, across Procare's SMB customer base" />
                     <ResultCard metric="130K+"  label="Teachers Reached"        subLabel="Already using Procare daily — curriculum added value without adding friction" />
@@ -199,7 +199,7 @@ export default function ProcareCurriculumCaseStudy() {
 
                 {/* 6 contribution tiles */}
                 <FadeUp>
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {[
                       { title: 'Discovery & Research',       body: 'Customer interviews, pain point synthesis, partnership evaluation' },
                       { title: 'Partnership Design',          body: 'Direct collaboration with LBP to map their content structure into Procare\'s platform' },
@@ -208,7 +208,7 @@ export default function ProcareCurriculumCaseStudy() {
                       { title: 'Product Design',              body: 'End-to-end ownership of lesson planner, observation tool, assessments, and portfolio reports' },
                       { title: 'External Representation',     body: "Featured as co-presenter in LBP's industry webinar series, demoing the product live to childcare operators nationwide" },
                     ].map((card) => (
-                      <div key={card.title} className="bg-[#f8fafd] border border-[rgba(0,0,0,0.08)] rounded-[8px] p-5 flex flex-col gap-1">
+                      <div key={card.title} className="bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[8px] p-5 flex flex-col gap-1">
                         <p className="text-[14px] leading-[20px] font-semibold text-[var(--color-system-text-primary)]">{card.title}</p>
                         <p className="text-[13px] leading-[20px] text-[var(--color-system-text-secondary)]">{card.body}</p>
                       </div>
@@ -227,7 +227,7 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
 
                 <FadeUp className="mb-8">
-                  <div className="flex gap-10">
+                  <div className="flex flex-col md:flex-row gap-10">
                     <div className="flex-1 min-w-0 flex flex-col gap-3">
                       <p className="text-[20px] leading-[28px] font-bold text-[var(--color-system-text-primary)]">The Business Opportunity</p>
                       <p className="text-[16px] leading-[24px] text-[var(--color-system-text-secondary)]">
@@ -292,12 +292,12 @@ export default function ProcareCurriculumCaseStudy() {
                       <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] mb-6">
                         Before any UI could be designed, the LBP lesson catalog needed structure.
                       </p>
-                      <div className="flex gap-8">
+                      <div className="flex flex-col md:flex-row gap-8">
                         <div className="flex-1 min-w-0 text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] flex flex-col gap-4">
                           <p>I worked with engineering and LBP to define a tagging system organized around age group (Infants through Pre-K 4), activity category (STEAM, Language &amp; Literacy, etc.), week numbers, and teacher-attached milestones.</p>
                           <p>Each lesson also carried two PDF attachments: a Home Connection doc for parents and a Teacher&apos;s Lesson Guide with step-by-step classroom instructions. Getting this right meant teachers could filter to exactly what they needed — instead of scrolling through 4,000 cards.</p>
                         </div>
-                        <div className="flex-shrink-0 w-[45%]">
+                        <div className="w-full md:w-[45%]">
                           <img src={imgDataArch} alt="Curriculum data architecture" className="w-full object-cover rounded-[8px]" />
                         </div>
                       </div>
@@ -329,12 +329,12 @@ export default function ProcareCurriculumCaseStudy() {
                       <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] mb-6">
                         Every lesson was accessible at a glance through a detail modal.
                       </p>
-                      <div className="flex gap-8">
+                      <div className="flex flex-col md:flex-row gap-8">
                         <div className="flex-1 min-w-0 text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] flex flex-col gap-4">
                           <p>Every lesson was accessible at a glance through a detail modal: title, full description, learning outcome, age label, and PDF attachments — everything needed to prepare or share. Teachers could also create and edit their own lessons from scratch, attaching custom guides and milestone tags.</p>
                           <p>This became the critical bridge between LBP&apos;s third-party content and each school&apos;s own assessment framework. A teacher could take any LBP lesson and tie it to the milestones they needed to track for compliance.</p>
                         </div>
-                        <div className="flex-shrink-0 w-[38%]">
+                        <div className="w-full md:w-[38%]">
                           <img src={imgLessonDetail} alt="Lesson detail and custom builder" className="w-full object-cover rounded-[8px]" />
                         </div>
                       </div>
@@ -430,14 +430,14 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
 
                 {/* Results row 1 */}
-                <FadeUp className="flex gap-4 mb-4">
+                <FadeUp className="flex flex-col sm:flex-row gap-4 mb-4">
                   <ResultCard metric="60"   label="Schools Enrolled"    subLabel="in the LBP pilot in the first 30 days of launch" />
                   <ResultCard metric="154"  label="Schools Onboarded"   subLabel="by September 2022 — within the first full pilot period" />
                   <ResultCard metric="3+"   label="Partnerships"        subLabel="LBP at launch, Marco Polo, ABC mouse and Lakeshore Learning in Year 2" />
                 </FadeUp>
 
                 {/* Results row 2 */}
-                <FadeUp className="flex gap-4 mb-6">
+                <FadeUp className="flex flex-col sm:flex-row gap-4 mb-6">
                   <ResultCard metric="$20M+"  label="ARR Pipeline Generated" subLabel="New revenue directly attributed to the curriculum and assessment product line" />
                   <ResultCard metric="$1.75B" label="Procare acquisition"     subLabel="Procare acquired by Roper Technologies — with early learning cited as part of the product portfolio that drove valuation." />
                   <ResultCard metric="0 → 1"  label="EdTech Product"          subLabel="Procare had no EdTech product before this initiative. I designed the category, the partnership model, and every screen from scratch." />
@@ -468,7 +468,7 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
 
                 <FadeUp>
-                  <div className="bg-white border border-[rgba(0,0,0,0.08)] rounded-[6px] overflow-hidden">
+                  <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] overflow-hidden">
                     <LearningRow
                       title="Business case and UX are the same work"
                       body="The most impactful design decisions weren't interface choices — they were earlier, in how we structured the data, chose the partnership, and sequenced the rollout. Understanding the strategic context made the design work matter beyond the screen."

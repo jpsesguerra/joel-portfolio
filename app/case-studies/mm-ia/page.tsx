@@ -76,7 +76,7 @@ export default function MmIaCaseStudy() {
           </div>
 
           {/* ── Body: Chapters + Sections ─────────────────────────────────── */}
-          <div className="px-10 py-10">
+          <div className="px-4 py-6 md:px-10 md:py-10">
             <div className="max-w-[960px] mx-auto flex gap-10 items-start">
             <Chapters items={CHAPTERS} />
 
@@ -110,14 +110,14 @@ export default function MmIaCaseStudy() {
 
                 {/* Meta row */}
                 <FadeUp delay={0.15} className="mb-6">
-                  <div className="border-t border-[var(--color-system-border)] pt-6 flex gap-4">
+                  <div className="border-t border-[var(--color-system-border)] pt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
                     {[
                       { label: 'ROLE',     value: 'Sole Product Designer' },
                       { label: 'TIMELINE', value: 'Mar – Jun 2025' },
                       { label: 'PLATFORM', value: 'Web, iOS, Android' },
                       { label: 'TOOLS',    value: 'Figma, Webflow, Bolt, Datadog' },
                     ].map(({ label, value }) => (
-                      <div key={label} className="flex-1 min-w-0 bg-[#f8fafd] border border-[rgba(0,0,0,0.08)] rounded-[8px] px-5 py-4 flex flex-col gap-1">
+                      <div key={label} className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[8px] px-5 py-4 flex flex-col gap-1">
                         <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-system-text-secondary)]">{label}</p>
                         <p className="text-[14px] leading-[20px] font-medium text-[var(--color-system-text-primary)]">{value}</p>
                       </div>
@@ -127,7 +127,7 @@ export default function MmIaCaseStudy() {
 
                 {/* 3 Result Cards */}
                 <FadeUp delay={0.2}>
-                  <div className="flex gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                     <ResultCard metric="95%" label="Client Satisfaction"    subLabel="Score from clients who adopted the new navigation system" />
                     <ResultCard metric="25%" label="Productivity Increase"  subLabel="For power users — no more time wasted looking for the right pages or having multiple tabs open" />
                     <ResultCard metric="50%" label="Time Saved"             subLabel="By sales engineers stating it's now faster and clearer to walk new prospecting clients through the product" />
@@ -165,7 +165,7 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
 
                 <FadeUp>
-                  <div className="flex gap-10">
+                  <div className="flex flex-col md:flex-row gap-10">
                     {/* The Problem */}
                     <div className="flex-1 min-w-0 flex flex-col gap-3">
                       <p className="text-[20px] leading-[28px] font-bold text-[var(--color-system-text-secondary)]">The Problem</p>
@@ -207,8 +207,8 @@ export default function MmIaCaseStudy() {
                 {/* 2×2 research blocks */}
                 <FadeUp className="flex flex-col gap-3 mb-6">
                   {/* Row 1 */}
-                  <div className="flex gap-3">
-                    <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[rgba(0,0,0,0.08)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">User Interviews</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
                         <img src={imgUserInterviews} alt="User Interviews" className="w-full h-full object-cover" />
@@ -217,7 +217,7 @@ export default function MmIaCaseStudy() {
                         With the help of Granola AI, I spoke with dozens of users—teammates, admins, and first-time explorers across General Admin, Transportation, Pay, and Membership roles.
                       </p>
                     </div>
-                    <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[rgba(0,0,0,0.08)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
+                    <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Existing UI Audit</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
                         <img src={imgExistingUiAudit} alt="Existing UI Audit" className="w-full h-full object-cover" />
@@ -228,8 +228,8 @@ export default function MmIaCaseStudy() {
                     </div>
                   </div>
                   {/* Row 2 */}
-                  <div className="flex gap-3">
-                    <div className="flex-1 min-w-0 bg-[#f8fafd] border border-[rgba(0,0,0,0.08)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
+                    <div className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Datadog Analysis</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
                         <img src={imgDatadogAnalysis} alt="Datadog Analysis" className="w-full h-full object-cover" />
@@ -238,7 +238,7 @@ export default function MmIaCaseStudy() {
                         Analyzed session recordings across multiple user segments for each region to identify pain points.
                       </p>
                     </div>
-                    <div className="flex-1 min-w-0 bg-[#f8fafd] border border-[rgba(0,0,0,0.08)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
+                    <div className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Usage Patterns</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px] bg-[#cde7fa]">
                         <img src={imgUsagePatterns} alt="Usage Patterns" className="w-full h-full object-cover rounded-[5px]" />
@@ -253,7 +253,7 @@ export default function MmIaCaseStudy() {
                 {/* KEY FINDINGS */}
                 <FadeUp>
                   <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-system-text-secondary)] mb-4">KEY FINDINGS</p>
-                  <div className="bg-white border border-[rgba(0,0,0,0.08)] rounded-[6px] overflow-hidden">
+                  <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] overflow-hidden">
                     <FindingRow
                       number="01"
                       title="Users were often lost with high cognitive load searching for pages"
@@ -293,7 +293,7 @@ export default function MmIaCaseStudy() {
 
                 {/* 2-col principles */}
                 <FadeUp className="mb-6">
-                  <div className="flex gap-10 text-[14px]">
+                  <div className="flex flex-col md:flex-row gap-10 text-[14px]">
                     <div className="flex-1 min-w-0 flex flex-col gap-4">
                       {[
                         { title: 'Prioritize Essential Items', body: 'Most frequently used features at top-level for quick access' },
@@ -341,8 +341,8 @@ export default function MmIaCaseStudy() {
 
                 {/* Callout: screenshot + text */}
                 <FadeUp className="mb-6">
-                  <div className="bg-[rgba(0,163,246,0.12)] border border-[#00a3f6] rounded-[6px] px-6 py-5 flex gap-5 items-center">
-                    <div className="shrink-0 w-[315px] h-[155px] border-2 border-[var(--color-system-text-primary)] overflow-hidden">
+                  <div className="bg-[rgba(0,163,246,0.12)] border border-[#00a3f6] rounded-[6px] px-6 py-5 flex flex-col md:flex-row gap-5 items-start md:items-center">
+                    <div className="w-full md:w-[315px] h-[155px] border-2 border-[var(--color-system-text-primary)] overflow-hidden">
                       <img src={imgCalloutScreenshot} alt="Navigation screenshot" className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0 text-[12px] leading-[18px] font-medium text-[var(--color-system-text-primary)] tracking-[0.06px]">
@@ -376,7 +376,7 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
 
                 {/* Column + Filter blocks */}
-                <FadeUp className="flex gap-10 mb-6">
+                <FadeUp className="flex flex-col md:flex-row gap-10 mb-6">
                   <div className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                     <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Column Customization</p>
                     <div className="w-full overflow-hidden rounded-[4px]">
@@ -422,14 +422,14 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
 
                 {/* Row 1 */}
-                <FadeUp className="flex gap-4 mb-4">
+                <FadeUp className="flex flex-col sm:flex-row gap-4 mb-4">
                   <ResultCard metric="95%" label="Client Satisfaction"   subLabel="Score from clients who adopted the new navigation system" />
                   <ResultCard metric="25%" label="Productivity Increase" subLabel="For power users — no more time wasted looking for the right pages or having multiple tabs open" />
                   <ResultCard metric="50%" label="Time Saved"            subLabel="By sales engineers stating it's now faster and clearer to walk new prospecting clients through the product" />
                 </FadeUp>
 
                 {/* Row 2 */}
-                <FadeUp className="flex gap-4 mb-6">
+                <FadeUp className="flex flex-col sm:flex-row gap-4 mb-6">
                   <ResultCard metric="50%" label="Power User Adoption"      subLabel="Power-users across transportation and finance created custom filters and presets within 30 days" />
                   <ResultCard metric="33%" label="Support Requests Reduced" subLabel="Reduction of developer-specific table customization requests within the first 90 days" />
                   <ResultCard metric="20%" label="Onboarding Time Saved"    subLabel="Saved by the Onboarding team on the next 3 new clients when ingesting their unique dataset" />
@@ -457,10 +457,10 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
 
                 <FadeUp>
-                  <div className="bg-white border border-[rgba(0,0,0,0.08)] rounded-[6px] overflow-hidden mb-6">
+                  <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] overflow-hidden mb-6">
                     {/* Learning 1 */}
-                    <div className="border-b border-[var(--color-system-border)] p-6 flex gap-8 items-start">
-                      <p className="w-[280px] flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
+                    <div className="border-b border-[var(--color-system-border)] p-6 flex flex-col md:flex-row gap-8 items-start">
+                      <p className="md:w-[280px] md:flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
                         Understanding Different Workflows Through Research
                       </p>
                       <div className="flex-1 min-w-0 text-[16px] leading-[24px] text-[var(--color-system-text-secondary)] flex flex-col gap-4">
@@ -469,8 +469,8 @@ export default function MmIaCaseStudy() {
                       </div>
                     </div>
                     {/* Learning 2 */}
-                    <div className="border-b border-[var(--color-system-border)] p-6 flex gap-8 items-start">
-                      <p className="w-[280px] flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
+                    <div className="border-b border-[var(--color-system-border)] p-6 flex flex-col md:flex-row gap-8 items-start">
+                      <p className="md:w-[280px] md:flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
                         Managing Multiple Teams Through Collaboration
                       </p>
                       <div className="flex-1 min-w-0 text-[16px] leading-[24px] text-[var(--color-system-text-secondary)] flex flex-col gap-4">
@@ -479,8 +479,8 @@ export default function MmIaCaseStudy() {
                       </div>
                     </div>
                     {/* Learning 3 */}
-                    <div className="p-6 flex gap-8 items-start">
-                      <p className="w-[280px] flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
+                    <div className="p-6 flex flex-col md:flex-row gap-8 items-start">
+                      <p className="md:w-[280px] md:flex-shrink-0 text-[16px] leading-[24px] font-medium text-[var(--color-system-text-primary)]">
                         Building a Unified Design System
                       </p>
                       <div className="flex-1 min-w-0 text-[16px] leading-[24px] text-[var(--color-system-text-secondary)] flex flex-col gap-4">

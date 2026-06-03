@@ -62,7 +62,7 @@ function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAl
     </>
   )
 
-  const cardClass = `flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms]${comingSoon ? ' opacity-50 pointer-events-none' : ' hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]'}`
+  const cardClass = `flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms]${comingSoon ? ' opacity-50 pointer-events-none' : ' hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]'}`
 
   if (href && !comingSoon) {
     return <a href={href} className={cardClass}>{inner}</a>
