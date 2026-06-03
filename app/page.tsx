@@ -45,7 +45,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 items-stretch">
 
             {/* Hero card — spans 2 columns on desktop */}
-            <div className="lg:col-span-2 rounded-[6px] border border-[rgba(0,0,0,0.08)] overflow-hidden flex flex-col justify-between relative">
+            <div className="lg:col-span-2 rounded-[6px] border border-[rgba(0,0,0,0.08)] overflow-hidden flex flex-col justify-between relative lg:h-[588px]">
               <img
                 src={imgHeroBg}
                 alt=""
@@ -104,15 +104,15 @@ export default function Home() {
             </div>
 
             {/* Right column: Work Experience + DS Card — stacked on desktop, side-by-side on tablet */}
-            <div className="grid grid-cols-2 lg:grid-cols-1 gap-3 h-full">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-3">
 
               {/* Work Experience carousel */}
-              <div className="flex flex-col h-full min-h-[200px]">
+              <div className="flex flex-col h-[280px]">
                 <WorkExperienceCarousel />
               </div>
 
               {/* DS Card */}
-              <a href="/design-systems" className="flex flex-col h-full min-h-[200px]">
+              <a href="/design-systems" className="flex flex-col h-[280px]">
                 <AnimatedDSCard />
               </a>
             </div>
