@@ -32,6 +32,7 @@ export default function AIProjects() {
       <div className="flex flex-col flex-1 min-w-0 pt-[60px] md:pt-0">
         <Header pageTitle="AI Projects" />
         <main className="flex-1 px-10 py-6">
+          <div className="max-w-[960px] mx-auto">
           <div className="flex gap-6 items-stretch">
             {projects.map((project) => {
               const inner = (
@@ -70,6 +71,7 @@ export default function AIProjects() {
                 </div>
               )
             })}
+          </div>
           </div>
         </main>
         <Footer />

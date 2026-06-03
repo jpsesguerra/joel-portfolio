@@ -22,20 +22,28 @@ interface CaseStudyCardProps {
   imageAlt: string
   badges: string[]
   href?: string
+  comingSoon?: boolean
 }
 
 // ─── Card component ───────────────────────────────────────────────────────────
-function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAlt, badges, href }: CaseStudyCardProps) {
+function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAlt, badges, href, comingSoon }: CaseStudyCardProps) {
   const inner = (
     <>
-      <div className="flex items-center gap-[10px] flex-wrap">
-        <img src={logo} alt={logoAlt} className="w-6 h-6 object-contain" />
-        {tags.map((tag, i) => (
-          <span key={tag} className="flex items-center gap-[10px]">
-            {i > 0 && <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />}
-            <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">{tag}</p>
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-[10px] flex-wrap">
+          <img src={logo} alt={logoAlt} className="w-6 h-6 object-contain" />
+          {tags.map((tag, i) => (
+            <span key={tag} className="flex items-center gap-[10px]">
+              {i > 0 && <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />}
+              <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">{tag}</p>
+            </span>
+          ))}
+        </div>
+        {comingSoon && (
+          <span className="flex-shrink-0 font-mono text-[12px] leading-[18px] uppercase text-[var(--color-system-text-secondary)] bg-[#d9d9d9] px-2 py-1 rounded-[4px]">
+            Coming Soon
           </span>
-        ))}
+        )}
       </div>
       <div className="flex flex-col gap-2">
         <p className="text-[18px] leading-[26px] font-bold text-[var(--color-text-primary)]">{title}</p>
@@ -54,9 +62,9 @@ function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAl
     </>
   )
 
-  const cardClass = 'flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]'
+  const cardClass = `flex-1 min-w-0 bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms]${comingSoon ? ' opacity-50 pointer-events-none' : ' hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]'}`
 
-  if (href) {
+  if (href && !comingSoon) {
     return <a href={href} className={cardClass}>{inner}</a>
   }
   return <div className={cardClass}>{inner}</div>
@@ -67,7 +75,7 @@ const caseStudies: CaseStudyCardProps[] = [
   {
     logo: imgMmLogo,
     logoAlt: 'Milk Moovement',
-    tags: ['Milk Moovement', 'B2B', 'AgriTech'],
+    tags: ['Milk Moovement', 'B2B', 'Multi-User Workflows'],
     title: 'Turning Operational Chaos into Clear Workflows',
     description: 'Re-designed the Information Architecture for a multi-user and multi-permission operations platform.',
     image: imgMmNavUpdate,
@@ -78,7 +86,7 @@ const caseStudies: CaseStudyCardProps[] = [
   {
     logo: imgMmLogo,
     logoAlt: 'Milk Moovement',
-    tags: ['Milk Moovement', 'B2B', 'AI Feature'],
+    tags: ['Milk Moovement', 'B2B', 'AI Scheduling Feature'],
     title: 'Moove — Schedule Autopilot',
     description: 'Designing the AI scheduling interface that lets dairy cooperatives trust a machine learning engine with their most expensive weekly decision.',
     image: imgMooveUpdate,
@@ -89,7 +97,7 @@ const caseStudies: CaseStudyCardProps[] = [
   {
     logo: imgProcareLogoSrc,
     logoAlt: 'Procare',
-    tags: ['Procare', 'B2B', 'EdTech'],
+    tags: ['Procare', 'B2B', 'Curriculum Integration + Marketplace'],
     title: 'Designing a $20M Product Line from Zero',
     description: 'How Procare entered the EdTech Market through deep research, successful partnerships and clear design decisions.',
     image: imgProcareEdtech,
@@ -100,12 +108,13 @@ const caseStudies: CaseStudyCardProps[] = [
   {
     logo: imgProcareLogoSrc,
     logoAlt: 'Procare',
-    tags: ['Procare', 'B2B2C', 'ChildcareTech'],
+    tags: ['Procare', 'B2B2C', 'Activity Logging App'],
     title: 'From Paper to Playground: Daily Activity Logging for Teachers',
     description: "Designing Procare's Daily Activity Log that gave teachers back the time they were losing to paperwork — and returned it to the children who needed them.",
     image: imgProcareChild,
     imageAlt: 'Procare Daily Activity Log',
     badges: ['65% Parent Engagement', '4.9★ Apple Store', '4.8★ Play Store'],
+    comingSoon: true,
   },
 ]
 
@@ -118,10 +127,12 @@ export default function CaseStudies() {
       <div className="flex flex-col flex-1 min-w-0 pt-[60px] md:pt-0">
         <Header pageTitle="Case Studies" />
         <main className="flex-1 px-10 py-6">
-          <div className="grid grid-cols-2 gap-6">
-            {caseStudies.map((cs) => (
-              <CaseStudyCard key={cs.title} {...cs} />
-            ))}
+          <div className="max-w-[960px] mx-auto">
+            <div className="grid grid-cols-2 gap-6">
+              {caseStudies.map((cs) => (
+                <CaseStudyCard key={cs.title} {...cs} />
+              ))}
+            </div>
           </div>
         </main>
         <Footer />

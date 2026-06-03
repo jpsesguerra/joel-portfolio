@@ -60,7 +60,7 @@ interface DSCardProps {
 
 function DesignSystemCard({ title, description, comingSoon, notionHref, caseStudyHref }: DSCardProps) {
   return (
-    <div className="relative bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 w-full flex flex-col gap-5">
+    <div className={`relative bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-5 w-full flex flex-col gap-5${comingSoon ? ' opacity-50' : ''}`}>
       {/* Header row */}
       <div className="flex items-center justify-between gap-4">
         <p className="text-[18px] leading-[26px] font-bold text-[var(--color-text-primary)]">{title}</p>
@@ -119,18 +119,20 @@ export default function DesignSystems() {
       <MobileNav />
       <div className="flex flex-col flex-1 min-w-0 pt-[60px] md:pt-0">
         <Header pageTitle="Design Systems" />
-        <main className="flex-1 px-10 py-6 flex flex-col gap-6">
-          <DesignSystemCard
-            title="Liquid Design System"
-            description="Liquid is the design system powering Milk Moovement's product suite — a set of shared tokens, components, and patterns that three React engineering teams use to build consistent, accessible, data-dense interfaces for dairy cooperative operations."
-            notionHref="https://elfin-price-9c1.notion.site/Liquid-Design-System-Milk-Moovement-373b421354b981ddbe04f98cbfb150e8?source=copy_link"
-            caseStudyHref="/case-studies/mm-ia"
-          />
-          <DesignSystemCard
-            comingSoon
-            title="Paper – Web Design System"
-            description="A design system built around tangible texture as a base layered with technological elements—where surface, outline and interaction work together to create an experience that feels alive and human. Inspired by paper.design app that I use when visually working with designs while starting from code."
-          />
+        <main className="flex-1 px-10 py-6">
+          <div className="max-w-[960px] mx-auto flex flex-col gap-6">
+            <DesignSystemCard
+              title="Liquid Design System"
+              description="Liquid is the design system powering Milk Moovement's product suite — a set of shared tokens, components, and patterns that three React engineering teams use to build consistent, accessible, data-dense interfaces for dairy cooperative operations."
+              notionHref="https://elfin-price-9c1.notion.site/Liquid-Design-System-Milk-Moovement-373b421354b981ddbe04f98cbfb150e8?source=copy_link"
+              caseStudyHref="/case-studies/mm-ia"
+            />
+            <DesignSystemCard
+              comingSoon
+              title="Paper – Web Design System"
+              description="A design system built around tangible texture as a base layered with technological elements—where surface, outline and interaction work together to create an experience that feels alive and human. Inspired by paper.design app that I use when visually working with designs while starting from code."
+            />
+          </div>
         </main>
         <Footer />
       </div>

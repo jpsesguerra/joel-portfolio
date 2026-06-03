@@ -45,7 +45,8 @@ export default function About() {
       <MobileNav />
       <div className="flex flex-col flex-1 min-w-0 pt-[60px] md:pt-0">
         <Header pageTitle="About Me" />
-        <main className="flex-1 px-10 py-6 flex flex-col gap-0">
+        <main className="flex-1 px-10 py-6">
+          <div className="max-w-[960px] mx-auto flex flex-col gap-0">
 
           {/* Profile section */}
           <div className="flex gap-6 items-start pb-10 border-b border-[rgba(0,0,0,0.08)]">
@@ -227,6 +228,7 @@ export default function About() {
             </div>
           </div>
 
+          </div>
         </main>
         <Footer />
       </div>

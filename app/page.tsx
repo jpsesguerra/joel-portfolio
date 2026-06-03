@@ -42,7 +42,7 @@ export default function Home() {
         <main className="flex-1 px-4 md:px-6 lg:px-10 py-4 md:py-6 flex flex-col gap-3">
 
           {/* Top row: Hero card (2/3) + right column (1/3) — same grid as case study row below */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 items-stretch">
 
             {/* Hero card — spans 2 columns on desktop */}
             <div className="lg:col-span-2 rounded-[6px] border border-[rgba(0,0,0,0.08)] overflow-hidden flex flex-col justify-between relative">
