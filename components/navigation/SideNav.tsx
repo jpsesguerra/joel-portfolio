@@ -93,7 +93,7 @@ function IdentityBlock({ collapsed }: { collapsed: boolean }) {
     )
   }
   return (
-    <a href="/" className="flex items-center gap-[9px] px-3 py-4 border-b border-[var(--color-system-border)] hover:bg-[var(--color-system-white)] transition-colors duration-[150ms]">
+    <a href="/" className="h-[80px] flex items-center gap-[9px] px-3 border-b border-[var(--color-system-border)] hover:bg-[var(--color-system-white)] transition-colors duration-[150ms]">
       <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-[4px] lg:rounded-[4.8px] overflow-hidden flex-shrink-0">
         <img src={JOEL_LOGO} alt="Joel Esguerra" className="w-full h-full object-cover" />
       </div>
