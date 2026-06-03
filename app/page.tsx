@@ -61,9 +61,8 @@ export default function Home() {
               <div className="relative z-20 flex flex-col gap-[10px] p-6 md:p-10 lg:w-[72%]">
                 <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)]">MY NAME IS JOEL,</p>
                 <h2 className="text-[40px] leading-[48px] font-bold text-[var(--color-text-primary)] tracking-[-0.4px]">
-                  I turn operationally complex<br />
-                  platforms into something<br />
-                  people want to use.
+                  I turn operationally complex platforms into<br />
+                  something people want to use.
                 </h2>
                 <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">
                   Ten years designing B2B platforms where the workflows are messy, the user types are many, and the margin for confusion is zero. I&apos;ve shipped products used by farmers, daycare owners, truck drivers, and finance teams — and they all had to work on day one.

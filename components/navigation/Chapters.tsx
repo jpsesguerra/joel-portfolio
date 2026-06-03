@@ -82,7 +82,7 @@ export function Chapters({ items }: ChaptersProps) {
       >
         {/* Expanding menu */}
         {menuOpen && (
-          <div className="mb-2 bg-white rounded-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.14)] border border-[var(--color-system-border)] p-3 flex flex-col gap-0.5 min-w-[180px]">
+          <div className="mb-2 bg-[var(--color-system-white)] rounded-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.14)] border border-[var(--color-system-border)] p-3 flex flex-col gap-0.5 min-w-[180px]">
             {items.map(({ id, label }, index) => (
               <NavLink key={id} id={id} label={label} index={index} onClick={() => setMenuOpen(false)} />
             ))}
@@ -92,7 +92,7 @@ export function Chapters({ items }: ChaptersProps) {
         {/* FAB trigger */}
         <button
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex items-center gap-2 bg-white border border-[var(--color-system-border)] shadow-[0_4px_16px_rgba(0,0,0,0.12)] rounded-full pl-3 pr-4 py-2 transition-shadow hover:shadow-[0_6px_24px_rgba(0,0,0,0.16)]"
+          className="flex items-center gap-2 bg-[var(--color-system-white)] border border-[var(--color-system-border)] shadow-[0_4px_16px_rgba(0,0,0,0.12)] rounded-full pl-3 pr-4 py-2 transition-shadow hover:shadow-[0_6px_24px_rgba(0,0,0,0.16)]"
           aria-label="Toggle chapter navigation"
         >
           {/* Icon: list / close */}

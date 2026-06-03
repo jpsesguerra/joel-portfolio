@@ -27,7 +27,7 @@ function SlideChart({ isActive }: { isActive: boolean }) {
 
   return (
     <div
-      className="bg-[#f8fafd] rounded-[6px] px-4 pt-3 pb-2 flex flex-col gap-1"
+      className="bg-[var(--color-system-background-02)] rounded-[6px] px-4 pt-3 pb-2 flex flex-col gap-1"
       style={{ height: SLIDE_H }}
     >
       {/* Subtitle lives here only — hidden from other slides */}
@@ -88,7 +88,7 @@ function SlideChart({ isActive }: { isActive: boolean }) {
 function SlideRecommendation() {
   return (
     <div
-      className="bg-[#f8fafd] rounded-[6px] px-4 py-3 flex flex-col justify-between"
+      className="bg-[var(--color-system-background-02)] rounded-[6px] px-4 py-3 flex flex-col justify-between"
       style={{ height: SLIDE_H }}
     >
       <div className="flex flex-col gap-2 text-[11px] leading-[16px] text-[var(--color-text-primary)] tracking-[0.03px]">
@@ -145,7 +145,7 @@ function SlideAIToolsInner() {
 
   return (
     <div
-      className="bg-[#f8fafd] rounded-[6px] px-6 flex flex-col justify-center gap-4"
+      className="bg-[var(--color-system-background-02)] rounded-[6px] px-6 flex flex-col justify-center gap-4"
       style={{ height: SLIDE_H }}
     >
       <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-text-secondary)]">
@@ -211,7 +211,7 @@ export function WorkExperienceCarousel() {
 
   return (
     // flex-1 so this card grows to match AnimatedDSCard in the same flex-col column
-    <div className="bg-white rounded-[6px] border border-[rgba(0,0,0,0.08)] p-4 flex flex-col gap-2 flex-1">
+    <div className="bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-4 flex flex-col gap-2 flex-1">
       {/* Fixed header — subtitle removed (now lives inside slide 1 only) */}
       <div className="px-2 flex items-center justify-between shrink-0">
         <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Work Experience</p>

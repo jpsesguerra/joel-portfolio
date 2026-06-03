@@ -75,7 +75,7 @@ export function AnimatedStatCard({ stats }: AnimatedStatCardProps) {
   }, [])
 
   return (
-    <div ref={ref} className="bg-[#f8fafd] rounded-[6px] p-6 flex flex-col gap-4 max-h-[184px] overflow-hidden">
+    <div ref={ref} className="bg-[var(--color-system-background-02)] rounded-[6px] p-6 flex flex-col gap-4 max-h-[184px] overflow-hidden">
       {stats.map((stat) => (
         <StatRow key={stat.label} {...stat} started={started} />
       ))}

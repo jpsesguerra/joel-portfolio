@@ -43,7 +43,7 @@ export function AnimatedDSCard() {
   const teams = useCountUp(3, started, 1200)
 
   return (
-    <div ref={ref} className="relative rounded-[6px] border border-[rgba(0,0,0,0.08)] overflow-hidden flex-1 bg-white min-h-[200px]">
+    <div ref={ref} className="relative rounded-[6px] border border-[var(--color-system-border)] overflow-hidden flex-1 bg-[var(--color-system-white)] min-h-[200px]">
       {/* Badge */}
       <div className="absolute top-4 left-4 z-10 bg-[#e0f5e8] px-2 py-[3px] rounded-[4px]">
         <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#2c7d5a] uppercase">LIQUID DESIGN SYSTEM</p>

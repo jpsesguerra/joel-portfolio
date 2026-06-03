@@ -42,7 +42,7 @@ export function NavActionMenu() {
       {/* CTA button — hidden on mobile */}
       <a
         href="mailto:jpsesguerra@gmail.com"
-        className="hidden sm:flex items-center justify-center px-3 py-[7px] rounded-md bg-[var(--color-brand-primary)] border border-[rgba(0,0,0,0.08)] text-white font-mono text-[14px] leading-[22px] uppercase whitespace-nowrap hover:opacity-90 transition-opacity duration-[150ms]"
+        className="hidden sm:flex items-center justify-center px-3 py-[7px] rounded-md bg-[var(--color-brand-primary)] border border-[var(--color-system-border)] text-white font-mono text-[14px] leading-[22px] uppercase whitespace-nowrap hover:opacity-90 transition-opacity duration-[150ms]"
       >
         Let&apos;s Connect
       </a>
