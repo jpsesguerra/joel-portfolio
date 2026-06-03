@@ -103,15 +103,15 @@ export default function Home() {
             </div>
 
             {/* Right column: Work Experience + DS Card — always stacked */}
-            <div className="grid grid-cols-1 gap-3">
+            <div className="grid grid-cols-1 gap-2">
 
               {/* Work Experience carousel */}
-              <div className="flex flex-col h-[280px]">
+              <div className="flex flex-col h-[284px]">
                 <WorkExperienceCarousel />
               </div>
 
               {/* DS Card */}
-              <a href="/design-systems" className="flex flex-col h-[280px]">
+              <a href="/design-systems" className="flex flex-col h-[284px]">
                 <AnimatedDSCard />
               </a>
             </div>
@@ -121,7 +121,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
 
             {/* Card 1 — Stats-based (Milk Moovement) */}
-            <a href="/case-studies/mm-ia" className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+            <a href="/case-studies/mm-ia" className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
@@ -153,7 +153,7 @@ export default function Home() {
             </a>
 
             {/* Card 2 — Procare case study image */}
-            <a href="/case-studies/procare-curriculum" className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
+            <a href="/case-studies/procare-curriculum" className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5 transition-shadow duration-[250ms] hover:shadow-[0_4px_16px_rgba(0,0,0,0.10)]">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
@@ -176,7 +176,7 @@ export default function Home() {
             </a>
 
             {/* Card 3 — Third case study */}
-            <div className="flex-1 min-w-0 bg-[var(--color-system-white)]rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5">
+            <div className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] p-5 flex flex-col gap-5">
               <div className="bg-[#e5f8fb] px-2 py-[3px] rounded-[4px] self-start">
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
