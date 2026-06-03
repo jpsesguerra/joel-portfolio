@@ -217,10 +217,10 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
               </section>
 
-              {/* ══ 02 / PROBLEM ════════════════════════════════════════════ */}
+              {/* ══ 01 / PROBLEM ════════════════════════════════════════════ */}
               <section id="problem" className="py-10">
                 <FadeUp className="mb-6">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">02 / PROBLEM</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">01 / PROBLEM</p>
                   <h2 className="text-[32px] leading-[40px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.16px]">
                     Three Broken Systems, One Platform to Fix Them
                   </h2>
@@ -253,7 +253,7 @@ export default function ProcareCurriculumCaseStudy() {
               {/* ══ 03 / DISCOVERY & RESEARCH ═══════════════════════════════ */}
               <section id="discovery" className="py-10">
                 <FadeUp className="mb-6">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">03 / Discovery & Research</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">02 / Discovery & Research</p>
                   <h2 className="text-[32px] leading-[40px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.16px] mb-3">
                     Talk to the Schools First, Design Second
                   </h2>
@@ -275,10 +275,10 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
               </section>
 
-              {/* ══ 04 / DESIGN ═════════════════════════════════════════════ */}
+              {/* ══ 03 / DESIGN ═════════════════════════════════════════════ */}
               <section id="design" className="py-10">
                 <FadeUp className="mb-8">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">04 / DESIGN</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">03 / DESIGN</p>
                   <h2 className="text-[32px] leading-[40px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.16px]">
                     Six Interconnected Systems, One Cohesive Experience
                   </h2>
@@ -402,7 +402,7 @@ export default function ProcareCurriculumCaseStudy() {
               {/* ══ THE CONFERENCE MOMENT ════════════════════════════════════ */}
               <section id="conference" className="py-10">
                 <FadeUp className="mb-6">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">05 / THE CONFERENCE MOMENT</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">04 / THE CONFERENCE MOMENT</p>
                   <h2 className="text-[32px] leading-[40px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.16px] mb-6">
                     When the Partner Trusts You to Represent Both Brands
                   </h2>
@@ -420,10 +420,10 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
               </section>
 
-              {/* ══ 06 / RESULTS ════════════════════════════════════════════ */}
+              {/* ══ 05 / RESULTS ════════════════════════════════════════════ */}
               <section id="results" className="py-10">
                 <FadeUp className="mb-6">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">06 / RESULTS</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">05 / RESULTS</p>
                   <h2 className="text-[32px] leading-[40px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.16px]">
                     From Zero to a Product Line That Changed the Business
                   </h2>
@@ -461,7 +461,7 @@ export default function ProcareCurriculumCaseStudy() {
               {/* ══ WHAT I LEARNED ══════════════════════════════════════════ */}
               <section id="learnings" className="py-10">
                 <FadeUp className="mb-6">
-                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">07 / WHAT I LEARNED</p>
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-brand-primary)] mb-3">06 / WHAT I LEARNED</p>
                   <h2 className="text-[40px] leading-[48px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.4px]">
                     Designing for Acquisition
                   </h2>
