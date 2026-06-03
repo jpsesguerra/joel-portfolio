@@ -58,7 +58,7 @@ export default function Home() {
                 className="absolute top-0 right-0 pointer-events-none hidden lg:block"
                 style={{ width: '200px', height: 'auto', top: '-40px', right: '20px' }}
               />
-              <div className="relative z-20 flex flex-col gap-[10px] p-6 md:p-10 lg:max-w-[408px]">
+              <div className="relative z-20 flex flex-col gap-[10px] p-6 md:p-10 w-[76%]">
                 <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)]">MY NAME IS JOEL,</p>
                 <h2 className="text-[40px] leading-[48px] font-bold text-[var(--color-text-primary)] tracking-[-0.4px]">
                   I turn operationally complex platforms into something people want to use.
