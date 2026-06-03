@@ -118,7 +118,7 @@ export default function ProcareCurriculumCaseStudy() {
           </div>
 
           {/* ── Body: Chapters + Sections ─────────────────────────────────── */}
-          <div className="px-4 py-6 md:px-10 md:py-10">
+          <div className="">
             <div className="max-w-[960px] mx-auto flex gap-10 items-start">
             <Chapters items={CHAPTERS} />
 
