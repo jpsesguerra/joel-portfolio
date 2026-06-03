@@ -59,7 +59,7 @@ export function Chapters({ items }: ChaptersProps) {
           : 'text-[var(--color-system-text-tertiary)]'
       )}
     >
-      <span className="opacity-50 tabular-nums">{String(index + 1).padStart(2, '0')}</span>
+      <span className="opacity-50 tabular-nums">{String(index).padStart(2, '0')}</span>
       <span>{label}</span>
     </a>
   )
@@ -108,7 +108,7 @@ export function Chapters({ items }: ChaptersProps) {
             )}
           </span>
           <span className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-system-text-secondary)]">
-            {activeIndex >= 0 ? `${String(activeIndex + 1).padStart(2, '0')} ${activeLabel}` : 'Chapters'}
+            {activeIndex >= 0 ? `${String(activeIndex).padStart(2, '0')} ${activeLabel}` : 'Chapters'}
           </span>
         </button>
       </div>

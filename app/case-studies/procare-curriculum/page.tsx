@@ -118,8 +118,8 @@ export default function ProcareCurriculumCaseStudy() {
           </div>
 
           {/* ── Body: Chapters + Sections ─────────────────────────────────── */}
-          <div className="pl-[60px] pt-[60px]">
-            <div className="max-w-[960px] mx-auto flex gap-10 items-start">
+          <div className="pl-[40px] pt-[40px]">
+            <div className="flex gap-[40px] items-start">
             <Chapters items={CHAPTERS} />
 
             <div className="flex-1 min-w-0 max-w-[842px] flex flex-col divide-y divide-[var(--color-system-border)]">
