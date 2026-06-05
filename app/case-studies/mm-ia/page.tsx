@@ -491,12 +491,6 @@ export default function MmIaCaseStudy() {
                   </div>
                 </FadeUp>
 
-                {/* Moorice mascot GIF */}
-                <FadeUp>
-                  <div className="w-full flex justify-center">
-                    <img src="/Moorice_Dab_output.gif" alt="Moorice celebrating" className="max-w-full" />
-                  </div>
-                </FadeUp>
               </section>
 
               {/* ── Recommendation ───────────────────────────────────────────── */}
@@ -518,6 +512,14 @@ export default function MmIaCaseStudy() {
                   </div>
                 </div>
               </section>
+
+              {/* Moorice mascot GIF */}
+              <FadeUp>
+                <div className="py-6 flex flex-col items-center gap-3">
+                  <img src="/Moorice_Dab_output.gif" alt="Moorice celebrating" className="w-[50%]" />
+                  <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-secondary)] text-center">Thank You very Moo-ch for reading</p>
+                </div>
+              </FadeUp>
 
             </div>
             </div>
