@@ -499,6 +499,26 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
               </section>
 
+              {/* ── Recommendation ───────────────────────────────────────────── */}
+              <section className="py-10">
+                <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5">
+                  <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
+                    <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
+                    <p className="text-[11px] leading-[18px] text-[var(--color-text-primary)]">Joel is an exceptional product designer and was an absolute force at Milk Moovement. He was incredibly helpful when it came time to prototype thoughtful, credible solutions for marquee prospective customers, often on tight timelines and with real commercial stakes. Beyond pure design, Joel brought a strong go-to-market mindset. He was invaluable in creating sales enablement materials and collateral that actually reflected the product accurately while telling a compelling story for customers. Joel combines strong design taste with pragmatism and speed; a rare mix. Any team building and selling a serious product would be lucky to have him.</p>
+                  </div>
+                  <div className="flex items-start justify-between">
+                    <a href="https://www.linkedin.com/in/kenny-harris-50b664163/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                      <img src="/rec-kenny.jpg" alt="Kenny Harris" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                      <div>
+                        <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Kenny Harris</p>
+                        <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Sr. Enterprise Account Executive</p>
+                      </div>
+                    </a>
+                    <img src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" className="h-10 w-[77px] object-contain" />
+                  </div>
+                </div>
+              </section>
+
             </div>
             </div>
           </div>

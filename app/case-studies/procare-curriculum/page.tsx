@@ -490,6 +490,26 @@ export default function ProcareCurriculumCaseStudy() {
                 </FadeUp>
               </section>
 
+              {/* ── Recommendation ───────────────────────────────────────────── */}
+              <section className="py-10">
+                <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5">
+                  <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
+                    <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
+                    <p className="text-[11px] leading-[18px] text-[var(--color-text-primary)]">What separates Joel is how he operates at the intersection of product and design. He doesn&apos;t wait to be handed a problem statement — he helps shape it. Joel consistently surfaces the actual problem underneath the one being debated, articulates it clearly enough that engineers and stakeholders align faster, and moves into execution without losing that clarity. Most designers translate requirements. Joel challenges them. His collaboration style creates alignment, not just agreement — and his work lands with less friction because the people who need to build it were part of understanding why it matters.</p>
+                  </div>
+                  <div className="flex items-start justify-between">
+                    <a href="https://www.linkedin.com/in/stephenanastasi/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                      <img src="/rec-stephen.jpg" alt="Stephen Anastasi" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                      <div>
+                        <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Stephen Anastasi</p>
+                        <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Dir. of Product Management</p>
+                      </div>
+                    </a>
+                    <img src="/assets/06c24fb7-f2ec-4e83-8247-d40dfdb20e2f.png" alt="" className="h-10 w-[77px] object-contain" />
+                  </div>
+                </div>
+              </section>
+
             </div>
             </div>
           </div>
