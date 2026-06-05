@@ -907,6 +907,44 @@ export default function MooveCaseStudy() {
                 </FadeUp>
               </section>
 
+              {/* ── Recommendations ──────────────────────────────────────────── */}
+              <section className="py-10">
+                <div className="flex gap-[22px]">
+                  <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5">
+                    <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
+                      <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
+                      <p className="text-[11px] leading-[18px] text-[var(--color-text-primary)]">Joel poses an incredible affinity for understanding problems. While Joel can output screens, mocks, and flows with the best of them - Joel&apos;s true value lies in his endless hunger to understand customers, problems, and why. This affinity for deeply researching (and understanding) users then translates into all his design work. Which in turn yields world class UX and UI. Joel would be an invaluable asset to any team. One of the skills Joel possesses that sets him apart from other design leaders I have worked with is his ability to seamlessly transition between Micro and Macro Context. Enabling him to work both at the IC and executive level flawlessly.</p>
+                    </div>
+                    <div className="flex items-start justify-between">
+                      <a href="https://www.linkedin.com/in/milesrand/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <img src="/rec-miles.jpg" alt="Miles Rand" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                        <div>
+                          <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Miles Rand</p>
+                          <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Head of Product</p>
+                        </div>
+                      </a>
+                      <img src="/assets/0b96496c-35c8-4655-bd02-3a0f3a7f18f5.png" alt="Fleetio" className="h-10 w-[77px] object-contain" />
+                    </div>
+                  </div>
+                  <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5">
+                    <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
+                      <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
+                      <p className="text-[11px] leading-[18px] text-[var(--color-text-primary)]">Joel is an exceptional product designer and was an absolute force at Milk Moovement. He was incredibly helpful when it came time to prototype thoughtful, credible solutions for marquee prospective customers, often on tight timelines and with real commercial stakes. Beyond pure design, Joel brought a strong go-to-market mindset. He was invaluable in creating sales enablement materials and collateral that actually reflected the product accurately while telling a compelling story for customers. Joel combines strong design taste with pragmatism and speed; a rare mix. Any team building and selling a serious product would be lucky to have him.</p>
+                    </div>
+                    <div className="flex items-start justify-between">
+                      <a href="https://www.linkedin.com/in/kenny-harris-50b664163/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+                        <img src="/rec-kenny.jpg" alt="Kenny Harris" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                        <div>
+                          <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Kenny Harris</p>
+                          <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Sr. Enterprise Account Executive</p>
+                        </div>
+                      </a>
+                      <img src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" className="h-10 w-[77px] object-contain" />
+                    </div>
+                  </div>
+                </div>
+              </section>
+
             </div>
             </div>
           </div>

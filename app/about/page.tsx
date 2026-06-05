@@ -317,7 +317,7 @@ function RecommendationCard({
     <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow duration-[150ms]">
       <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
         <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
-        <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">{quote}</p>
+        <p className="text-[11px] leading-[18px] text-[var(--color-text-primary)]">{quote}</p>
       </div>
       <div className="flex items-start justify-between">
         {linkedinHref
