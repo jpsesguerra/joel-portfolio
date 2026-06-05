@@ -7,6 +7,7 @@ import {
   Moon01Icon,
 } from '@hugeicons/core-free-icons'
 import { useTheme } from '@/components/ThemeProvider'
+import { CopyEmailButton } from '@/components/CopyEmailButton'
 
 export function NavActionMenu() {
   const { theme, toggle } = useTheme()
@@ -23,14 +24,13 @@ export function NavActionMenu() {
       >
         <HugeiconsIcon icon={Linkedin01Icon} size={20} />
       </a>
-      {/* Email — always visible */}
-      <a
-        href="mailto:jpsesguerra@gmail.com"
+      {/* Email icon — always visible */}
+      <CopyEmailButton
         aria-label="Email"
         className="w-5 h-6 flex items-center justify-center opacity-80 text-[var(--color-text-primary)]"
       >
         <HugeiconsIcon icon={MailAdd01Icon} size={20} />
-      </a>
+      </CopyEmailButton>
       {/* Theme toggle — always visible */}
       <button
         onClick={toggle}
@@ -40,12 +40,9 @@ export function NavActionMenu() {
         <HugeiconsIcon icon={theme === 'dark' ? Sun01Icon : Moon01Icon} size={20} />
       </button>
       {/* CTA button — hidden on mobile */}
-      <a
-        href="mailto:jpsesguerra@gmail.com"
-        className="hidden sm:flex items-center justify-center px-3 py-[7px] rounded-md bg-[var(--color-brand-primary)] border border-[var(--color-system-border)] text-white font-mono text-[14px] leading-[22px] uppercase whitespace-nowrap hover:opacity-90 transition-opacity duration-[150ms]"
-      >
+      <CopyEmailButton className="hidden sm:flex items-center justify-center px-3 py-[7px] rounded-md bg-[var(--color-brand-primary)] border border-[var(--color-system-border)] text-white font-mono text-[14px] leading-[22px] uppercase whitespace-nowrap hover:opacity-90 transition-opacity duration-[150ms]">
         Let&apos;s Connect
-      </a>
+      </CopyEmailButton>
     </div>
   )
 }

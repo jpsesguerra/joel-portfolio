@@ -32,7 +32,7 @@ const toolSkills = ['Figma', 'Claude Code', 'Storybook', 'Cursor', 'GitHub', 'Pe
 
 function SkillChip({ label }: { label: string }) {
   return (
-    <div className="bg-[#f8fafd] px-2 py-1 rounded-[4px]">
+    <div className="bg-[var(--color-system-background-02)] px-2 py-1 rounded-[4px]">
       <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)] whitespace-nowrap">{label}</p>
     </div>
   )
@@ -137,6 +137,7 @@ export default function About() {
               <ExperienceEntry
                 logo={imgMilkMoovementLogo}
                 logoBg="#00A3F6"
+                linkedinHref="https://www.linkedin.com/company/milkmoovement/"
                 title="Senior Product Designer"
                 company="Milk Moovement"
                 location="Halifax, NS — Remote"
@@ -154,6 +155,7 @@ export default function About() {
               <ExperienceEntry
                 logo={imgProcareLogoLight}
                 logoBg="#faf8f4"
+                linkedinHref="https://www.linkedin.com/company/procaresolutions/"
                 title="Senior Product Designer"
                 company="Procare Solutions"
                 location="Denver, CO. — Remote"
@@ -186,6 +188,7 @@ export default function About() {
               <ExperienceEntry
                 logo={imgKWLogo}
                 logoBg="#f8fafd"
+                linkedinHref="https://www.linkedin.com/company/keller-williams-realty-llc/"
                 title="Product Designer"
                 company="Team Leads - Keller Williams"
                 location="Milton, ON."
@@ -209,6 +212,7 @@ export default function About() {
                 name="Miles Rand"
                 role="Head of Product"
                 logo={imgFleetio1}
+                linkedinHref="https://www.linkedin.com/in/milesrand/"
                 quote="Joel poses an incredible affinity for understanding problems. While Joel can output screens, mocks, and flows with the best of them - Joel's true value lies in his endless hunger to understand customers, problems, and why. This affinity for deeply researching (and understanding) users then translates into all his design work. Which in turn yields world class UX and UI. Joel would be an invaluable asset to any team. One of the skills Joel possesses that sets him apart from other design leaders I have worked with is his ability to seamlessly transition between Micro and Macro Context. Enabling him to work both at the IC and executive level flawlessly."
               />
               <RecommendationCard
@@ -216,6 +220,7 @@ export default function About() {
                 name="Kenny Harris"
                 role="Sr. Enterprise Account Executive"
                 logo={imgFleetio2}
+                linkedinHref="https://www.linkedin.com/in/kenny-harris-50b664163/"
                 quote="Joel is an exceptional product designer and was an absolute force at Milk Moovement. He was incredibly helpful when it came time to prototype thoughtful, credible solutions for marquee prospective customers, often on tight timelines and with real commercial stakes. Beyond pure design, Joel brought a strong go-to-market mindset. He was invaluable in creating sales enablement materials and collateral that actually reflected the product accurately while telling a compelling story for customers. Joel combines strong design taste with pragmatism and speed; a rare mix. Any team building and selling a serious product would be lucky to have him."
               />
               <RecommendationCard
@@ -223,6 +228,7 @@ export default function About() {
                 name="Stephen Anastasi"
                 role="Dir. of Product Management"
                 logo={imgFleetio3}
+                linkedinHref="https://www.linkedin.com/in/stephenanastasi/"
                 quote="What separates Joel is how he operates at the intersection of product and design. He doesn't wait to be handed a problem statement — he helps shape it. Joel consistently surfaces the actual problem underneath the one being debated, articulates it clearly enough that engineers and stakeholders align faster, and moves into execution without losing that clarity. Most designers translate requirements. Joel challenges them. His collaboration style creates alignment, not just agreement — and his work lands with less friction because the people who need to build it were part of understanding why it matters."
               />
             </div>
@@ -237,7 +243,7 @@ export default function About() {
 }
 
 function ExperienceEntry({
-  logo, logoBg, title, company, location, dates, badge, bullets, isLast,
+  logo, logoBg, title, company, location, dates, badge, bullets, isLast, linkedinHref,
 }: {
   logo: string
   logoBg: string
@@ -248,13 +254,17 @@ function ExperienceEntry({
   badge?: string
   bullets: string[]
   isLast?: boolean
+  linkedinHref?: string
 }) {
+  const logoImg = <img src={logo} alt={company} className="w-[40px] h-[40px] object-contain" />
   return (
     <div className="flex gap-6 items-stretch">
       {/* Icon + line */}
       <div className="flex flex-col items-center flex-shrink-0 w-[54px]">
         <div className="w-[54px] h-[54px] rounded-[14.7px] overflow-hidden flex items-center justify-center flex-shrink-0" style={{ backgroundColor: logoBg }}>
-          <img src={logo} alt={company} className="w-[40px] h-[40px] object-contain" />
+          {linkedinHref
+            ? <a href={linkedinHref} target="_blank" rel="noopener noreferrer" className="w-full h-full flex items-center justify-center">{logoImg}</a>
+            : logoImg}
         </div>
         {!isLast && <div className="flex-1 w-px bg-[rgba(0,0,0,0.08)] mt-3" />}
       </div>
@@ -285,28 +295,34 @@ function ExperienceEntry({
 }
 
 function RecommendationCard({
-  avatar, name, role, logo, quote,
+  avatar, name, role, logo, quote, linkedinHref,
 }: {
   avatar: string
   name: string
   role: string
   logo: string
   quote: string
+  linkedinHref?: string
 }) {
+  const person = (
+    <div className="flex items-center gap-3">
+      <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+      <div>
+        <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">{name}</p>
+        <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">{role}</p>
+      </div>
+    </div>
+  )
   return (
-    <div className="flex-1 min-w-0 bg-white border border-[rgba(0,0,0,0.08)] rounded-[6px] px-4 py-5 flex flex-col gap-5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow duration-[150ms]">
-      <div className="bg-[#f8fafd] rounded-[8px] px-4 py-2 flex flex-col gap-2">
+    <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[6px] px-4 py-5 flex flex-col gap-5 hover:shadow-[0_4px_16px_rgba(0,0,0,0.08)] transition-shadow duration-[150ms]">
+      <div className="bg-[var(--color-system-background-02)] rounded-[8px] px-4 py-2 flex flex-col gap-2">
         <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">★★★★★</p>
         <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">{quote}</p>
       </div>
       <div className="flex items-start justify-between">
-        <div className="flex items-center gap-3">
-          <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
-          <div>
-            <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">{name}</p>
-            <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">{role}</p>
-          </div>
-        </div>
+        {linkedinHref
+          ? <a href={linkedinHref} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">{person}</a>
+          : person}
         <img src={logo} alt="" className="h-10 w-[77px] object-contain" />
       </div>
     </div>

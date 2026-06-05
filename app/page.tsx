@@ -1,3 +1,4 @@
+import { CopyEmailButton } from '@/components/CopyEmailButton'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -64,7 +65,7 @@ export default function Home() {
                   I turn operationally complex platforms into something people want to use.
                 </h2>
                 <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">
-                  Ten years designing B2B platforms where the workflows are messy, the user types are many, and the margin for confusion is zero. I&apos;ve shipped products used by farmers, daycare owners, truck drivers, and finance teams — and they all had to work on day one.
+                  Ten years designing B2B platforms where the workflows are messy, the user types are many, and the margin for confusion is zero. I&apos;ve shipped products used by farmers, daycare owners, truck drivers, and finance teams.
                 </p>
                 <div className="flex items-center gap-[10px] mt-1">
                   <a
@@ -74,11 +75,10 @@ export default function Home() {
                     Case Studies
                   </a>
                   <a
-                    href="mailto:jpsesguerra@gmail.com"
+                    href="/about"
                     className="flex items-center gap-3 px-4 py-2 rounded-[4px] border border-[var(--color-system-border)] font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)] whitespace-nowrap"
                   >
-                    Let&apos;s Connect
-                    <img src={imgLinkIcon} alt="" className="w-5 h-5 opacity-60" />
+                    Learn more
                   </a>
                 </div>
               </div>
