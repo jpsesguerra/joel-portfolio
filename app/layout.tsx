@@ -1,6 +1,21 @@
 import type { Metadata } from 'next'
+import { Plus_Jakarta_Sans, Azeret_Mono } from 'next/font/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800'],
+  variable: '--font-plus-jakarta-sans',
+  display: 'swap',
+})
+
+const azeretMono = Azeret_Mono({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  variable: '--font-azeret-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: 'Joel Esguerra — Product Designer',
@@ -10,7 +25,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className={`${plusJakartaSans.variable} ${azeretMono.variable}`}>
       <body className="font-sans bg-[var(--color-system-background)] text-[var(--color-system-text-primary)] antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
