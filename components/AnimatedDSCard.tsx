@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { TokenCircleIcon, BoundingBoxIcon, LaptopPhoneSyncIcon } from '@hugeicons/core-free-icons'
 
@@ -50,9 +51,11 @@ export function AnimatedDSCard() {
       </div>
 
       {/* App screenshot — fades in, masked on the left edge */}
-      <img
+      <Image
         src={imgDsScreenshot}
         alt="Liquid design system screenshot"
+        width={200}
+        height={217}
         className="absolute right-0 top-[47px] h-[217px] object-cover object-left-top"
         style={{
           width: '200px',

@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 interface BeforeAfterSliderProps {
   beforeSrc: string
@@ -8,6 +9,8 @@ interface BeforeAfterSliderProps {
   beforeAlt?: string
   afterAlt?: string
   initialPosition?: number // 0–100, default 50
+  /** Intrinsic aspect ratio (width / height) of the before/after images, used to size the `fill` container. Defaults to the current usage's images (1440x1024). */
+  aspectRatio?: number
 }
 
 export function BeforeAfterSlider({
@@ -16,6 +19,7 @@ export function BeforeAfterSlider({
   beforeAlt = 'Before',
   afterAlt = 'After',
   initialPosition = 50,
+  aspectRatio = 1440 / 1024,
 }: BeforeAfterSliderProps) {
   const [pos, setPos] = useState(initialPosition)
   const dragging = useRef(false)
@@ -63,23 +67,28 @@ export function BeforeAfterSlider({
     <div
       ref={containerRef}
       className="relative w-full select-none overflow-hidden rounded border border-[var(--color-system-border)]"
-      style={{ cursor: dragging.current ? 'grabbing' : 'col-resize' }}
+      style={{ cursor: dragging.current ? 'grabbing' : 'col-resize', aspectRatio }}
     >
       {/* After (bottom layer — full width) */}
-      <img src={afterSrc} alt={afterAlt} className="block w-full" draggable={false} />
+      <Image src={afterSrc} alt={afterAlt} fill className="object-cover" draggable={false} />
 
       {/* Before (top layer — clipped to left side) */}
       <div
         className="absolute inset-0 overflow-hidden"
         style={{ width: `${pos}%` }}
       >
-        <img
-          src={beforeSrc}
-          alt={beforeAlt}
-          className="block h-full w-full"
-          style={{ minWidth: containerRef.current ? `${containerRef.current.offsetWidth}px` : 'auto' }}
-          draggable={false}
-        />
+        <div
+          className="relative h-full"
+          style={{ width: containerRef.current ? `${containerRef.current.offsetWidth}px` : '100%' }}
+        >
+          <Image
+            src={beforeSrc}
+            alt={beforeAlt}
+            fill
+            className="object-cover"
+            draggable={false}
+          />
+        </div>
       </div>
 
       {/* Labels */}

@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { usePathname } from 'next/navigation'
 import { HugeiconsIcon } from '@hugeicons/react'
 import { Menu01Icon, Cancel01Icon } from '@hugeicons/core-free-icons'
@@ -22,8 +23,8 @@ export function MobileNav() {
       {/* Top bar — mobile only */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center justify-between px-4 bg-[var(--color-system-background)] border-b border-[var(--color-system-border)]">
         <a href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-[3.2px] overflow-hidden flex-shrink-0">
-            <img src="/rec-avatar.png" alt="Joel Esguerra" className="w-full h-full object-cover" />
+          <div className="relative w-8 h-8 rounded-[3.2px] overflow-hidden flex-shrink-0">
+            <Image src="/rec-avatar.png" alt="Joel Esguerra" fill className="object-cover" />
           </div>
           <span className="text-[18px] leading-[26px] font-bold text-[var(--color-text-primary)]">Joel Esguerra</span>
         </a>

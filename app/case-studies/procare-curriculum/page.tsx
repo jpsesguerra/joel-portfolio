@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Image from 'next/image'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -50,7 +51,7 @@ function ClickToPlayVideo({ thumbnailSrc, embedSrc }: { thumbnailSrc: string; em
   }
   return (
     <div style={{ ...wrapStyle, cursor: 'pointer' }} onClick={() => setPlaying(true)}>
-      <img src={thumbnailSrc} alt="Video thumbnail" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      <Image src={thumbnailSrc} alt="Video thumbnail" fill style={{ objectFit: 'cover' }} />
       <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ width: 80, height: 80, background: 'rgba(0,0,0,0.6)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           <div style={{ width: 0, height: 0, borderLeft: '22px solid white', borderTop: '14px solid transparent', borderBottom: '14px solid transparent', marginLeft: 6 }} />
@@ -128,7 +129,7 @@ export default function ProcareCurriculumCaseStudy() {
               <section className="pb-10">
                 {/* Meta chips */}
                 <FadeUp className="flex items-center gap-3 mb-6">
-                  <img src={imgProcareLogo} alt="Procare" className="w-5 h-5 object-contain opacity-70" />
+                  <Image src={imgProcareLogo} alt="Procare" width={20} height={20} className="object-contain opacity-70" />
                   <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">Procare</span>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-system-text-tertiary)] opacity-40" />
                   <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">B2B</span>
@@ -146,7 +147,7 @@ export default function ProcareCurriculumCaseStudy() {
                 {/* Hero image */}
                 <FadeUp delay={0.1} className="mb-6">
                   <div className="rounded-[12px] overflow-hidden w-full">
-                    <img src={imgHero} alt="Procare curriculum platform" className="w-full object-cover" />
+                    <Image src={imgHero} alt="Procare curriculum platform" width={1600} height={900} className="w-full h-auto object-cover" />
                   </div>
                 </FadeUp>
 
@@ -245,7 +246,7 @@ export default function ProcareCurriculumCaseStudy() {
 
                 <FadeUp>
                   <div className="w-full overflow-hidden rounded-[8px]">
-                    <img src={imgProblems} alt="Three broken systems" className="w-full object-cover" />
+                    <Image src={imgProblems} alt="Three broken systems" width={1600} height={900} className="w-full h-auto object-cover" />
                   </div>
                 </FadeUp>
               </section>
@@ -264,13 +265,13 @@ export default function ProcareCurriculumCaseStudy() {
 
                 <FadeUp className="mb-4">
                   <div className="w-full overflow-hidden rounded-[8px]">
-                    <img src={imgDiscovery1} alt="Discovery research" className="w-full object-cover" />
+                    <Image src={imgDiscovery1} alt="Discovery research" width={1600} height={900} className="w-full h-auto object-cover" />
                   </div>
                 </FadeUp>
 
                 <FadeUp>
                   <div className="w-full overflow-hidden rounded-[8px]">
-                    <img src={imgDiscovery2} alt="Assumptions mapping" className="w-full object-cover" />
+                    <Image src={imgDiscovery2} alt="Assumptions mapping" width={1600} height={900} className="w-full h-auto object-cover" />
                   </div>
                 </FadeUp>
               </section>
@@ -298,7 +299,7 @@ export default function ProcareCurriculumCaseStudy() {
                           <p>Each lesson also carried two PDF attachments: a Home Connection doc for parents and a Teacher&apos;s Lesson Guide with step-by-step classroom instructions. Getting this right meant teachers could filter to exactly what they needed — instead of scrolling through 4,000 cards.</p>
                         </div>
                         <div className="w-full md:w-[45%]">
-                          <img src={imgDataArch} alt="Curriculum data architecture" className="w-full object-cover rounded-[8px]" />
+                          <Image src={imgDataArch} alt="Curriculum data architecture" width={1600} height={900} className="w-full h-auto object-cover rounded-[8px]" />
                         </div>
                       </div>
                     </DesignChapterBlock>
@@ -315,7 +316,7 @@ export default function ProcareCurriculumCaseStudy() {
                         <p>Color-coded STEAM badges, room filtering, and a persistent &quot;+ Add Lesson&quot; affordance let teachers and directors plan a full week&apos;s curriculum in under two minutes. A director could see all rooms at once; a teacher could focus only on their classroom.</p>
                       </div>
                       <div className="border border-[var(--color-system-border)] rounded-[6px] overflow-hidden">
-                        <img src={imgLessons} alt="Weekly lesson planner" className="w-full object-cover" />
+                        <Image src={imgLessons} alt="Weekly lesson planner" width={1600} height={900} className="w-full h-auto object-cover" />
                       </div>
                       <Caption>
                         <strong>Final lesson planner</strong> — Color-coded activity categories (STEAM, Cognitive, Interactive Reading, Language &amp; Literacy) let teachers instantly scan for coverage gaps across the week.
@@ -335,7 +336,7 @@ export default function ProcareCurriculumCaseStudy() {
                           <p>This became the critical bridge between LBP&apos;s third-party content and each school&apos;s own assessment framework. A teacher could take any LBP lesson and tie it to the milestones they needed to track for compliance.</p>
                         </div>
                         <div className="w-full md:w-[38%]">
-                          <img src={imgLessonDetail} alt="Lesson detail and custom builder" className="w-full object-cover rounded-[8px]" />
+                          <Image src={imgLessonDetail} alt="Lesson detail and custom builder" width={1600} height={900} className="w-full h-auto object-cover rounded-[8px]" />
                         </div>
                       </div>
                     </DesignChapterBlock>
@@ -351,13 +352,13 @@ export default function ProcareCurriculumCaseStudy() {
                         I designed it from the ground up — and the research we&apos;d done before touching a single frame made sure it was built around how teachers actually worked, not how we imagined they might.
                       </p>
                       <div className="w-full overflow-hidden rounded-[8px] mb-3">
-                        <img src={imgAssessment} alt="Assessment workflow" className="w-full object-cover" />
+                        <Image src={imgAssessment} alt="Assessment workflow" width={1600} height={900} className="w-full h-auto object-cover" />
                       </div>
                       <Caption>
                         <strong>Assessment workflow</strong> — Observation counts, progress ratings, and category filters designed to match how teachers actually logged classroom data during the day.
                       </Caption>
                       <div className="w-full overflow-hidden rounded-[8px] mt-6">
-                        <img src={imgTeacherFlow} alt="Teacher observation flow" className="w-full object-cover" />
+                        <Image src={imgTeacherFlow} alt="Teacher observation flow" width={1600} height={900} className="w-full h-auto object-cover" />
                       </div>
                     </DesignChapterBlock>
                   </FadeUp>
@@ -372,7 +373,7 @@ export default function ProcareCurriculumCaseStudy() {
                         The end of the assessment cycle needed to be actionable — not just a record, but something a school could put directly in a parent&apos;s hands. I designed the full flow: from selecting students, to writing a message, to sending via push notification through the parent&apos;s existing app.
                       </p>
                       <div className="w-full overflow-hidden rounded-[8px] mb-3">
-                        <img src={imgPortfolioSend} alt="Portfolio sending flow" className="w-full object-cover" />
+                        <Image src={imgPortfolioSend} alt="Portfolio sending flow" width={1600} height={900} className="w-full h-auto object-cover" />
                       </div>
                       <Caption>
                         Portfolio flow — Teachers select students, write a personal note, and send comprehensive developmental reports directly to parents in one flow.
@@ -391,7 +392,7 @@ export default function ProcareCurriculumCaseStudy() {
                         <p>The landing page drove the initial pilot signups and served as the primary conversion tool for the $50/month promotional launch pricing — which was later grandfathered in for early adopters at 50% off the standard rate.</p>
                       </div>
                       <div className="w-full overflow-hidden rounded-[8px]">
-                        <img src={imgLbpMarketing} alt="LBP marketing landing page" className="w-full object-cover" />
+                        <Image src={imgLbpMarketing} alt="LBP marketing landing page" width={1600} height={900} className="w-full h-auto object-cover" />
                       </div>
                     </DesignChapterBlock>
                   </FadeUp>
@@ -499,13 +500,13 @@ export default function ProcareCurriculumCaseStudy() {
                   </div>
                   <div className="flex items-start justify-between">
                     <a href="https://www.linkedin.com/in/stephenanastasi/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                      <img src="/rec-stephen.jpg" alt="Stephen Anastasi" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                      <Image src="/rec-stephen.jpg" alt="Stephen Anastasi" width={40} height={40} className="rounded-full object-cover flex-shrink-0" />
                       <div>
                         <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Stephen Anastasi</p>
                         <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Dir. of Product Management</p>
                       </div>
                     </a>
-                    <img src="/assets/06c24fb7-f2ec-4e83-8247-d40dfdb20e2f.png" alt="" className="h-10 w-[77px] object-contain" />
+                    <Image src="/assets/06c24fb7-f2ec-4e83-8247-d40dfdb20e2f.png" alt="" width={77} height={40} className="object-contain" />
                   </div>
                 </div>
               </section>

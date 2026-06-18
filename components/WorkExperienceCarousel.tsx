@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 
 // Figma assets — expires ~7 days from Jun 1 2026
 const imgChartBg   = '/assets/39e46a1d-aaa2-442a-81b2-2e9c7ddab828.svg'
@@ -54,9 +55,9 @@ function SlideChart({ isActive }: { isActive: boolean }) {
 
         {/* Chart images */}
         <div className="relative flex-1">
-          <img alt="" src={imgChartBg} className="absolute inset-0 w-full h-full object-fill" />
+          <Image alt="" src={imgChartBg} fill className="object-fill" />
           <div className="absolute" style={{ top: '10px', left: '2px', right: 0, bottom: '18px', overflow: 'hidden' }}>
-            <img alt="" src={imgChartLine} className="w-full h-full object-fill" />
+            <Image alt="" src={imgChartLine} fill className="object-fill" />
             {/* Reveal cover — shrinks right→left to expose line left→right */}
             <div
               className="absolute inset-0"
@@ -99,13 +100,13 @@ function SlideRecommendation() {
       </div>
       <div className="flex items-center justify-between py-[1px]">
         <div className="flex gap-3 items-center">
-          <img alt="Miles Rand" src={imgMilesPhoto} className="w-9 h-9 rounded-full object-cover shrink-0" />
+          <Image alt="Miles Rand" src={imgMilesPhoto} width={36} height={36} className="rounded-full object-cover shrink-0" />
           <div className="flex flex-col text-[var(--color-text-primary)]">
             <p className="font-bold text-[12px] leading-[18px]">Miles Rand</p>
             <p className="text-[11px] leading-[16px] tracking-[0.03px]">Head of Product @ Fleetio</p>
           </div>
         </div>
-        <img alt="Fleetio" src={imgFleetio} className="h-10 w-[77px] object-contain shrink-0" />
+        <Image alt="Fleetio" src={imgFleetio} width={77} height={40} className="object-contain shrink-0" />
       </div>
     </div>
   )
@@ -155,7 +156,7 @@ function SlideAIToolsInner() {
         <div key={t.label} className="flex flex-col gap-[6px]">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-[6px] flex items-center justify-center shrink-0" style={{ background: t.bg }}>
-              <img alt="" src={t.icon} className="w-6 h-6 object-contain" />
+              <Image alt="" src={t.icon} width={24} height={24} className="object-contain" />
             </div>
             <p className="font-mono text-[8px] leading-[18px] uppercase text-[var(--color-text-secondary)] flex-1">{t.label}</p>
             <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)] tabular-nums">

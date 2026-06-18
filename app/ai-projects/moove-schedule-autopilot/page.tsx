@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { motion, useInView, animate } from 'framer-motion'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
@@ -102,7 +103,7 @@ function ProblemCard({ icon, title, body }: { icon: string; title: string; body:
       className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-md p-5 flex flex-col gap-3"
     >
       <div className="w-10 h-10 rounded-md bg-[var(--color-brand-lagoon-surface)] flex items-center justify-center flex-shrink-0">
-        <img src={icon} alt="" className="w-6 h-6" aria-hidden />
+        <Image src={icon} alt="" width={24} height={24} className="w-6 h-6" aria-hidden />
       </div>
       <p className="text-[14px] leading-[20px] font-semibold text-[var(--color-system-text-primary)]">{title}</p>
       <p className="text-[12px] leading-[18px] text-[var(--color-system-text-secondary)]">{body}</p>
@@ -178,7 +179,7 @@ export default function MooveCaseStudy() {
             <div className="flex flex-col gap-6">
               {/* Metadata chips */}
               <FadeUp className="flex items-center gap-3">
-                <img src={imgMmLogo} alt="Milk Moovement" className="w-5 h-5 object-contain opacity-70" />
+                <Image src={imgMmLogo} alt="Milk Moovement" width={20} height={20} className="w-5 h-5 object-contain opacity-70" />
                 <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">Milk Moovement</span>
                 <span className="w-1 h-1 rounded-full bg-[var(--color-system-text-tertiary)] opacity-40" />
                 <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">B2B</span>
@@ -203,10 +204,12 @@ export default function MooveCaseStudy() {
               {/* Hero image */}
               <FadeUp delay={0.15} className="mt-4">
                 <div className="rounded-t-lg overflow-hidden border border-b-0 border-[var(--color-system-border)] shadow-[var(--shadow-card)]">
-                  <img
+                  <Image
                     src={imgHero}
                     alt="Moove Schedule Autopilot interface"
-                    className="w-full object-cover object-top"
+                    width={1920}
+                    height={946}
+                    className="w-full h-auto object-cover object-top"
                   />
                 </div>
               </FadeUp>
@@ -309,7 +312,7 @@ export default function MooveCaseStudy() {
                       <FadeUp key={i} delay={i * 0.07}>
                         <div className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-md p-5 flex flex-col gap-3">
                           <div className="w-8 h-8 rounded-md bg-[var(--color-brand-lagoon-surface)] flex items-center justify-center flex-shrink-0">
-                            <img src={card.icon} alt="" className="w-5 h-5" aria-hidden />
+                            <Image src={card.icon} alt="" width={20} height={20} className="w-5 h-5" aria-hidden />
                           </div>
                           <p className="text-[13px] leading-[18px] font-semibold text-[var(--color-system-text-primary)]">{card.title}</p>
                           <p className="text-[12px] leading-[18px] text-[var(--color-system-text-secondary)]">{card.body}</p>
@@ -401,7 +404,7 @@ export default function MooveCaseStudy() {
                     </div>
                     {/* Right: screenshot */}
                     <div className="flex-1 min-w-0 rounded-md overflow-hidden border border-[var(--color-system-border)]">
-                      <img src={imgResearchScreenshot} alt="Research workflow screenshot" className="w-full object-contain" />
+                      <Image src={imgResearchScreenshot} alt="Research workflow screenshot" width={1444} height={1140} className="w-full h-auto object-contain" />
                     </div>
                   </div>
                 </FadeUp>
@@ -605,16 +608,16 @@ export default function MooveCaseStudy() {
                           </div>
                         </div>
                         <div className="flex-1 min-w-0 relative">
-                          <img src={imgDemandPage} alt="Plant Demand Page" className="w-full rounded shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-[var(--color-system-border)]" />
+                          <Image src={imgDemandPage} alt="Plant Demand Page" width={1440} height={1024} className="w-full h-auto rounded shadow-[0_4px_16px_rgba(0,0,0,0.08)] border border-[var(--color-system-border)]" />
                           <div className="absolute bottom-[-20px] right-[-12px] w-[42%] rounded shadow-[0_8px_8px_rgba(0,0,0,0.12)] overflow-hidden border border-[var(--color-system-border)]">
-                            <img src={imgEditDemand} alt="Edit Demand modal" className="w-full" />
+                            <Image src={imgEditDemand} alt="Edit Demand modal" width={490} height={689} className="w-full h-auto" />
                           </div>
                         </div>
                       </div>
                       {/* Plant Profile */}
                       <div className="flex gap-8 items-start pt-6">
                         <div className="flex-1 min-w-0 rounded shadow-[0_8px_8px_rgba(0,0,0,0.12)] overflow-hidden border border-[var(--color-system-border)]">
-                          <img src={imgEditPlantModal} alt="Plant Profile configuration" className="w-full" />
+                          <Image src={imgEditPlantModal} alt="Plant Profile configuration" width={730} height={770} className="w-full h-auto" />
                         </div>
                         <div className="flex-1 min-w-0 flex flex-col gap-3">
                           <h4 className="text-[18px] leading-[26px] font-bold text-[var(--color-brand-primary)]">Plant Profile — Rule Configuration</h4>
@@ -627,7 +630,7 @@ export default function MooveCaseStudy() {
                           ].map(({ icon, title, desc }) => (
                             <div key={title} className="flex gap-3 items-start bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded px-3 py-2">
                               <div className="w-6 h-6 rounded flex items-center justify-center bg-[var(--color-brand-primary-surface)] shrink-0">
-                                <img src={icon} alt="" className="w-3.5 h-3.5" aria-hidden />
+                                <Image src={icon} alt="" width={14} height={14} className="w-3.5 h-3.5" aria-hidden />
                               </div>
                               <div className="flex flex-col gap-0.5">
                                 <p className="text-[12px] leading-[18px] font-medium text-[var(--color-system-text-primary)]">{title}</p>
@@ -651,7 +654,7 @@ export default function MooveCaseStudy() {
                           </div>
                         </div>
                         <div className="flex-1 min-w-0 rounded overflow-hidden border border-[var(--color-system-border)]">
-                          <img src={imgBayManagement} alt="Bay Management calendar view" className="w-full" />
+                          <Image src={imgBayManagement} alt="Bay Management calendar view" width={1440} height={1455} className="w-full h-auto" />
                         </div>
                       </div>
                     </div>
@@ -704,7 +707,7 @@ export default function MooveCaseStudy() {
                           </div>
                         </div>
                         <div className="flex-1 min-w-0 rounded overflow-hidden border border-[var(--color-system-border)]">
-                          <img src={imgWeightedCriteria} alt="Weighted criteria configuration" className="w-full" />
+                          <Image src={imgWeightedCriteria} alt="Weighted criteria configuration" width={1498} height={1176} className="w-full h-auto" />
                         </div>
                       </div>
                       {/* Design decision callout */}
@@ -714,7 +717,7 @@ export default function MooveCaseStudy() {
                       </div>
                       {/* Full autopilot screenshot */}
                       <div className="w-full rounded overflow-hidden border border-[var(--color-system-border)]">
-                        <img src={imgScheduleAutopilot} alt="Schedule Autopilot full view" className="w-full" />
+                        <Image src={imgScheduleAutopilot} alt="Schedule Autopilot full view" width={1920} height={1080} className="w-full h-auto" />
                       </div>
                     </div>
                   </div>
@@ -742,7 +745,7 @@ export default function MooveCaseStudy() {
                           { dot: imgTimelineDot,      phase: 'Phase 5 — AI Scheduler on New Foundation', dotColor: 'text-[var(--color-system-text-secondary)]', title: 'Moove Launched on the List UI',              desc: 'With the list UI as a foundation, I designed the Schedule Autopilot as a three-step wizard — Select Plants → Configure Criteria → Review in Sandbox — built on top of a page that could handle hundreds of routes, bulk operations, and real-time AI output without performance degradation.' },
                         ].map(({ dot, phase, dotColor, title, desc }, i, arr) => (
                           <div key={i} className={`flex gap-6 items-start pl-8 ${i < arr.length - 1 ? 'pb-10' : ''}`}>
-                            <img src={dot} alt="" className="w-3 h-4 shrink-0 mt-0.5" aria-hidden />
+                            <Image src={dot} alt="" width={12} height={16} className="w-3 h-4 shrink-0 mt-0.5" aria-hidden />
                             <div className="flex flex-col gap-1.5">
                               <p className={`font-mono text-[12px] leading-[18px] uppercase whitespace-nowrap ${dotColor}`}>{phase}</p>
                               <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">{title}</p>
@@ -768,7 +771,7 @@ export default function MooveCaseStudy() {
                         ].map(({ icon, bg, title, desc }) => (
                           <div key={title} className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-md p-5 flex flex-col gap-2">
                             <div className="w-8 h-8 rounded flex items-center justify-center shrink-0" style={{ background: `var(--color-brand-lagoon-surface)` }}>
-                              <img src={icon} alt="" className="w-3.5 h-3.5" aria-hidden />
+                              <Image src={icon} alt="" width={14} height={14} className="w-3.5 h-3.5" aria-hidden />
                             </div>
                             <p className="text-[14px] leading-[20px] font-medium text-[var(--color-system-text-primary)]">{title}</p>
                             <p className="text-[12px] leading-[18px] text-[var(--color-system-text-secondary)]">{desc}</p>
@@ -777,7 +780,7 @@ export default function MooveCaseStudy() {
                       </div>
                       {/* Plant list screenshot */}
                       <div className="w-full rounded overflow-hidden border border-[var(--color-system-border)]">
-                        <img src={imgPlantList} alt="Plant list scheduling view" className="w-full" />
+                        <Image src={imgPlantList} alt="Plant list scheduling view" width={1120} height={427} className="w-full h-auto" />
                       </div>
                       {/* AI Design Principles */}
                       <div className="flex flex-col md:flex-row gap-8 items-start">
@@ -791,7 +794,7 @@ export default function MooveCaseStudy() {
                           ].map(({ icon, title, desc }) => (
                             <div key={title} className="flex gap-3 items-start bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded px-3 py-2">
                               <div className="w-8 h-8 rounded flex items-center justify-center shrink-0" style={{ background: 'rgba(47,114,85,0.12)' }}>
-                                <img src={icon} alt="" className="w-3.5 h-3.5" aria-hidden />
+                                <Image src={icon} alt="" width={14} height={14} className="w-3.5 h-3.5" aria-hidden />
                               </div>
                               <div className="flex flex-col gap-1">
                                 <p className="text-[12px] leading-[18px] font-medium text-[var(--color-system-text-primary)]">{title}</p>
@@ -801,7 +804,7 @@ export default function MooveCaseStudy() {
                           ))}
                         </div>
                         <div className="flex-1 min-w-0 rounded overflow-hidden border border-[var(--color-system-border)]">
-                          <img src={imgAltMatch} alt="Alt match panel" className="w-full" />
+                          <Image src={imgAltMatch} alt="Alt match panel" width={1440} height={1589} className="w-full h-auto" />
                         </div>
                       </div>
                       {/* Fulfillment Dashboard */}
@@ -811,7 +814,7 @@ export default function MooveCaseStudy() {
                           <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">I designed a built-in fulfillment chart that allows users to see how the optimized schedule aligns with the demand for each plant based on available supply — giving admins a single-view confirmation before applying the AI schedule to production.</p>
                         </div>
                         <div className="w-full rounded overflow-hidden border border-[var(--color-system-border)]">
-                          <img src={imgFulfillmentChart} alt="Fulfillment supply vs demand chart" className="w-full" />
+                          <Image src={imgFulfillmentChart} alt="Fulfillment supply vs demand chart" width={1174} height={584} className="w-full h-auto" />
                         </div>
                         {/* Loom demo */}
                         <div className="w-full rounded-lg overflow-hidden border border-[var(--color-system-border)]" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
@@ -916,13 +919,13 @@ export default function MooveCaseStudy() {
                   </div>
                   <div className="flex items-start justify-between">
                     <a href="https://www.linkedin.com/in/milesrand/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                      <img src="/rec-miles.jpg" alt="Miles Rand" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                      <Image src="/rec-miles.jpg" alt="Miles Rand" width={40} height={40} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                       <div>
                         <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Miles Rand</p>
                         <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Head of Product</p>
                       </div>
                     </a>
-                    <img src="/assets/0b96496c-35c8-4655-bd02-3a0f3a7f18f5.png" alt="Fleetio" className="h-10 w-[77px] object-contain" />
+                    <Image src="/assets/0b96496c-35c8-4655-bd02-3a0f3a7f18f5.png" alt="Fleetio" width={77} height={40} className="h-10 w-[77px] object-contain" />
                   </div>
                 </div>
               </section>

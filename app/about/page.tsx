@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -50,8 +51,8 @@ export default function About() {
 
           {/* Profile section */}
           <div className="flex gap-6 items-start pb-10 border-b border-[rgba(0,0,0,0.08)]">
-            <div className="w-[162px] h-[198px] rounded-[6px] overflow-hidden flex-shrink-0">
-              <img src={imgProfile} alt="Joel Esguerra" className="w-full h-full object-cover object-top" />
+            <div className="relative w-[162px] h-[198px] rounded-[6px] overflow-hidden flex-shrink-0">
+              <Image src={imgProfile} alt="Joel Esguerra" fill className="object-cover object-top" />
             </div>
             <div className="flex-1 flex flex-col gap-4 justify-center">
               <h1 className="text-[40px] leading-[48px] font-bold text-[var(--color-text-primary)] tracking-[-0.4px]">Joel Esguerra</h1>
@@ -61,17 +62,17 @@ export default function About() {
               <div className="flex items-center gap-5">
                 <a href="#" className="flex items-center gap-3 border border-[rgba(0,0,0,0.08)] px-3 py-2 rounded-[4px]">
                   <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)]">VIEW IN PDF</p>
-                  <img src={imgLinkSquare} alt="" className="w-5 h-5 opacity-60" />
+                  <Image src={imgLinkSquare} alt="" width={20} height={20} className="opacity-60" />
                 </a>
                 <div className="flex items-center gap-5">
                   <a href="https://www.linkedin.com/in/jpesguerra/" target="_blank" rel="noopener noreferrer" className="opacity-40">
-                    <img src={imgLinkedin} alt="LinkedIn" className="w-6 h-6" />
+                    <Image src={imgLinkedin} alt="LinkedIn" width={24} height={24} />
                   </a>
                   <a href="https://webflow.com/@joelpaolo" target="_blank" rel="noopener noreferrer" className="opacity-40">
-                    <img src={imgWebflow} alt="Webflow" className="w-6 h-6" />
+                    <Image src={imgWebflow} alt="Webflow" width={24} height={24} />
                   </a>
                   <a href="mailto:jpsesguerra@gmail.com" className="opacity-40">
-                    <img src={imgMail} alt="Email" className="w-6 h-6" />
+                    <Image src={imgMail} alt="Email" width={24} height={24} />
                   </a>
                 </div>
               </div>
@@ -256,7 +257,7 @@ function ExperienceEntry({
   isLast?: boolean
   linkedinHref?: string
 }) {
-  const logoImg = <img src={logo} alt={company} className="w-[40px] h-[40px] object-contain" />
+  const logoImg = <Image src={logo} alt={company} width={40} height={40} className="object-contain" />
   return (
     <div className="flex gap-6 items-stretch">
       {/* Icon + line */}
@@ -306,7 +307,7 @@ function RecommendationCard({
 }) {
   const person = (
     <div className="flex items-center gap-3">
-      <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+      <Image src={avatar} alt={name} width={40} height={40} className="rounded-full object-cover flex-shrink-0" />
       <div>
         <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">{name}</p>
         <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">{role}</p>
@@ -323,7 +324,7 @@ function RecommendationCard({
         {linkedinHref
           ? <a href={linkedinHref} target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">{person}</a>
           : person}
-        <img src={logo} alt="" className="h-10 w-[77px] object-contain" />
+        <Image src={logo} alt="" width={77} height={40} className="object-contain" />
       </div>
     </div>
   )
