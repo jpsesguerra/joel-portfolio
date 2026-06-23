@@ -325,10 +325,46 @@ export default function MooveCaseStudy() {
                 <CsSectionHeader
                   tag="01 / Problem"
                   title="Manual scheduling is expensive by design."
-                  lead="This is the story of designing an AI scheduling tool that had to be trustworthy before it could be trusted."
+                  lead="CDI's transportation team faces significant challenges in manually selecting optimal processors for weekly schedules."
                 />
 
+                {/* Problem cards — 2×2 grid */}
+                <FadeUp className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                  {[
+                    {
+                      num: '01',
+                      title: 'Manual Selection Process',
+                      body: 'Labor-intensive process of manually matching optimal processors for weekly schedules — complicated by fluctuating milk production, changing customer demands, and dynamic market conditions. Leads to suboptimal outcomes, higher costs, and lacks visibility into economic implications.',
+                    },
+                    {
+                      num: '02',
+                      title: 'Time Constraints',
+                      body: 'The manual scheduling process lacks time to thoroughly evaluate all potential outcomes. This hinders the creation of cost-effective schedules and exploration of operational improvements — missing opportunities for cost savings and efficiency enhancements.',
+                    },
+                    {
+                      num: '03',
+                      title: 'Lack of Agility',
+                      body: 'The manual nature makes it difficult to adapt to sudden changes or unforeseen circumstances — common in the dynamic dairy industry. Results in missed opportunities for optimization and operational improvements.',
+                    },
+                    {
+                      num: '04',
+                      title: 'Need for Automation',
+                      body: 'A clear need emerged for an automated solution to process complex variables, rapidly evaluate multiple scenarios, and generate optimized schedules — maximizing efficiency, minimizing costs, and enhancing operational agility.',
+                    },
+                  ].map(({ num, title, body }) => (
+                    <div key={num} className="bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[8px] p-5 flex flex-col gap-3">
+                      <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-brand-primary)]">{num}</span>
+                      <p className="text-[16px] leading-[24px] font-semibold text-[var(--color-system-text-primary)]">{title}</p>
+                      <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)]">{body}</p>
+                    </div>
+                  ))}
+                </FadeUp>
 
+                <FadeUp>
+                  <Callout variant="info">
+                    The initial trigger came from <strong>Dairy Farmers of Ontario (DFO)</strong>, then expanded into a commercial contract with <strong>California Dairies Inc. (CDI)</strong>. The promise: automated load matching, 50% reduction in scheduling time, and measurable hauling cost savings — priced as a <strong>savings-share model</strong> where Milk Moovement took 15% of the savings it generated.
+                  </Callout>
+                </FadeUp>
               </section>
 
               {/* ── 02 Research ────────────────────────────────────────── */}
