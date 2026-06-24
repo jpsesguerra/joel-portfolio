@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useState } from 'react'
 
 export function LoomEmbed({ src, className }: { src: string; className?: string }) {
@@ -34,12 +35,16 @@ export function LoomEmbed({ src, className }: { src: string; className?: string 
       className={className}
       onClick={() => setPlaying(true)}
     >
-      <img
+      <Image
         src={thumbnail}
         alt="Loom video thumbnail"
+        width={1280}
+        height={720}
         loading="lazy"
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover', opacity: 0.85 }}
+        className="object-cover"
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', opacity: 0.85 }}
         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+        unoptimized
       />
       <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ width: 72, height: 72, background: 'rgba(0,0,0,0.65)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(4px)' }}>

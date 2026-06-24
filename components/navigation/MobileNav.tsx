@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -23,7 +24,7 @@ export function MobileNav() {
       <div className="md:hidden fixed top-0 left-0 right-0 z-50 h-[60px] flex items-center justify-between px-4 bg-[var(--color-system-background)] border-b border-[var(--color-system-border)]">
         <a href="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-[3.2px] overflow-hidden flex-shrink-0">
-            <img src="/rec-avatar.png" alt="Joel Esguerra" className="w-full h-full object-cover" />
+            <Image src="/rec-avatar.png" alt="Joel Esguerra" width={32} height={32} priority className="w-full h-full object-cover" />
           </div>
           <span className="text-[18px] leading-[26px] font-bold text-[var(--color-text-primary)]">Joel Esguerra</span>
         </a>

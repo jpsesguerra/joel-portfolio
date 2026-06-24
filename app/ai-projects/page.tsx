@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
@@ -43,7 +44,7 @@ export default function AIProjects() {
               )
               const img = (
                 <div className="h-[208px] w-full overflow-hidden rounded-[4px]">
-                  <img src={project.image} alt={project.title} className="w-full h-full object-contain" />
+                  <Image src={project.image} alt={project.title} width={440} height={208} loading="lazy" className="w-full h-full object-contain" />
                 </div>
               )
               const isComingSoon = !project.href

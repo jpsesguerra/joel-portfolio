@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 interface TechStackLogoProps {
   src: string
   alt: string
@@ -6,8 +8,7 @@ interface TechStackLogoProps {
 export function TechStackLogo({ src, alt }: TechStackLogoProps) {
   return (
     <div className="w-[57px] h-8 flex items-center justify-center">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={src} alt={alt} className="max-w-full max-h-full object-contain" />
+      <Image src={src} alt={alt} width={57} height={32} loading="lazy" className="max-w-full max-h-full object-contain" style={{ width: 'auto', height: 'auto' }} />
     </div>
   )
 }

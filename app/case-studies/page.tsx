@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -31,7 +32,7 @@ function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAl
     <>
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-[10px] flex-wrap">
-          <img src={logo} alt={logoAlt} className="w-6 h-6 object-contain" />
+          <Image src={logo} alt={logoAlt} width={24} height={24} loading="lazy" className="w-6 h-6 object-contain" />
           {tags.map((tag, i) => (
             <span key={tag} className="flex items-center gap-[10px]">
               {i > 0 && <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />}
@@ -50,7 +51,7 @@ function CaseStudyCard({ logo, logoAlt, tags, title, description, image, imageAl
         <p className="text-[14px] leading-[22px] text-[var(--color-text-primary)]">{description}</p>
       </div>
       <div className="aspect-[660/336] w-full overflow-hidden rounded-[4px]">
-        <img src={image} alt={imageAlt} className="w-full h-full object-cover object-top" />
+        <Image src={image} alt={imageAlt} width={660} height={336} loading="lazy" className="w-full h-full object-cover object-top" />
       </div>
       <div className="flex items-center gap-[10px] flex-wrap">
         {badges.map((badge) => (

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { CopyEmailButton } from '@/components/CopyEmailButton'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
@@ -47,17 +48,23 @@ export default function Home() {
 
             {/* Hero card — spans 2 columns on desktop */}
             <div className="lg:col-span-2 rounded-[6px] border border-[var(--color-system-border)] overflow-hidden flex flex-col justify-between relative lg:h-[588px]">
-              <img
+              <Image
                 src={imgHeroBg}
                 alt=""
+                width={1440}
+                height={900}
+                priority
                 className="absolute inset-0 w-full h-full object-cover pointer-events-none"
               />
               {/* Lanyard + ID card — hidden below lg so text stays readable */}
-              <img
+              <Image
                 src={imgJoelPhoto}
                 alt="Joel Esguerra"
+                width={200}
+                height={280}
+                priority
                 className="absolute top-0 right-0 pointer-events-none hidden lg:block"
-                style={{ width: '200px', height: 'auto', top: '-40px', right: '20px' }}
+                style={{ top: '-40px', right: '20px', height: 'auto' }}
               />
               <div className="relative z-20 flex flex-col gap-[10px] p-6 md:p-10 w-[76%]">
                 <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-primary)]">MY NAME IS JOEL,</p>
@@ -94,7 +101,7 @@ export default function Home() {
                     }}
                   >
                     {[...techLogos, ...techLogos].map((src, i) => (
-                      <img key={i} src={src} alt="" className="h-8 object-contain flex-shrink-0" style={{ maxWidth: '57px' }} />
+                      <Image key={i} src={src} alt="" width={57} height={32} loading="lazy" className="h-8 object-contain flex-shrink-0" style={{ maxWidth: '57px', width: 'auto' }} />
                     ))}
                   </div>
                 </div>
@@ -141,7 +148,7 @@ export default function Home() {
               <div className="flex flex-col gap-3">
                 <p className="text-[20px] leading-[28px] font-bold text-[var(--color-text-primary)]">Turning Operational Chaos into Clear Workflows</p>
                 <div className="flex items-center gap-[10px]">
-                  <img src={imgMilkMoovementLogo} alt="Milk Moovement" className="w-6 h-6 object-contain" />
+                  <Image src={imgMilkMoovementLogo} alt="Milk Moovement" width={24} height={24} loading="lazy" className="w-6 h-6 object-contain" />
                   <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">MILK MOOVEMENT</p>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />
                   <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">B2B</p>
@@ -157,13 +164,13 @@ export default function Home() {
                 <p className="font-mono font-semibold text-[12px] leading-[18px] text-[#008394] uppercase">CASE STUDY</p>
               </div>
               <div className="flex items-center justify-center overflow-hidden rounded-[6px] bg-[var(--color-system-background-02)] h-[184px]">
-                <img src="https://res.cloudinary.com/du0witbcr/image/upload/v1780436157/01_PC-Header_fz46uj.png" alt="Procare case study" className="w-full h-full object-contain" />
+                <Image src="https://res.cloudinary.com/du0witbcr/image/upload/v1780436157/01_PC-Header_fz46uj.png" alt="Procare case study" width={400} height={184} loading="lazy" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col gap-3">
                 <p className="text-[20px] leading-[28px] font-bold text-[var(--color-text-primary)]">Designing Procare&apos;s First EdTech Product Line</p>
                 <div className="flex items-center gap-[10px]">
                   <div className="w-6 h-6 rounded-full bg-[#e3f9fb] flex items-center justify-center">
-                    <img src="/assets/7d9bc9e1-da37-473f-9614-aa3a5400ec0f.png" alt="Procare" className="w-[18px] h-[18px] object-contain" />
+                    <Image src="/assets/7d9bc9e1-da37-473f-9614-aa3a5400ec0f.png" alt="Procare" width={18} height={18} loading="lazy" className="w-[18px] h-[18px] object-contain" />
                   </div>
                   <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">PROCARE</p>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />
@@ -188,7 +195,7 @@ export default function Home() {
                 <p className="text-[20px] leading-[28px] font-bold text-[var(--color-text-primary)]">From Paper to Playground: Daily Activity Logging for Teachers</p>
                 <div className="flex items-center gap-[10px]">
                   <div className="w-6 h-6 rounded-full bg-[#e3f9fb] flex items-center justify-center">
-                    <img src="/assets/7d9bc9e1-da37-473f-9614-aa3a5400ec0f.png" alt="Procare" className="w-[18px] h-[18px] object-contain" />
+                    <Image src="/assets/7d9bc9e1-da37-473f-9614-aa3a5400ec0f.png" alt="Procare" width={18} height={18} loading="lazy" className="w-[18px] h-[18px] object-contain" />
                   </div>
                   <p className="font-mono text-[12px] leading-[18px] uppercase text-[var(--color-text-secondary)]">PROCARE</p>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-text-secondary)] opacity-50" />
@@ -249,13 +256,13 @@ export default function Home() {
               </div>
               <div className="flex items-start justify-between">
                 <a href="https://www.linkedin.com/in/milesrand/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                  <img src="/rec-miles.jpg" alt="Miles Rand" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                  <Image src="/rec-miles.jpg" alt="Miles Rand" width={40} height={40} loading="lazy" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                   <div>
                     <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Miles Rand</p>
                     <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Head of Product</p>
                   </div>
                 </a>
-                <img src="/assets/0b96496c-35c8-4655-bd02-3a0f3a7f18f5.png" alt="Fleetio" className="h-10 w-[77px] object-contain" />
+                <Image src="/assets/0b96496c-35c8-4655-bd02-3a0f3a7f18f5.png" alt="Fleetio" width={77} height={40} loading="lazy" className="h-10 w-[77px] object-contain" />
               </div>
             </div>
             <div className="bg-[var(--color-system-white)] rounded-[6px] border border-[var(--color-system-border)] px-4 py-5 flex flex-col gap-5">
@@ -265,13 +272,13 @@ export default function Home() {
               </div>
               <div className="flex items-start justify-between">
                 <a href="https://www.linkedin.com/in/kenny-harris-50b664163/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                  <img src="/rec-kenny.jpg" alt="Kenny Harris" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                  <Image src="/rec-kenny.jpg" alt="Kenny Harris" width={40} height={40} loading="lazy" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                   <div>
                     <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Kenny Harris</p>
                     <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Sr. Enterprise Account Executive</p>
                   </div>
                 </a>
-                <img src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" className="h-10 w-[77px] object-contain" />
+                <Image src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" width={77} height={40} loading="lazy" className="h-10 w-[77px] object-contain" />
               </div>
             </div>
           </div>

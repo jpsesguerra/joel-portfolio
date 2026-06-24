@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 interface BeforeAfterSliderProps {
@@ -66,16 +67,19 @@ export function BeforeAfterSlider({
       style={{ cursor: dragging.current ? 'grabbing' : 'col-resize' }}
     >
       {/* After (bottom layer — full width) */}
-      <img src={afterSrc} alt={afterAlt} className="block w-full" draggable={false} />
+      <Image src={afterSrc} alt={afterAlt} width={1440} height={900} loading="lazy" className="block w-full" draggable={false} />
 
       {/* Before (top layer — clipped to left side) */}
       <div
         className="absolute inset-0 overflow-hidden"
         style={{ width: `${pos}%` }}
       >
-        <img
+        <Image
           src={beforeSrc}
           alt={beforeAlt}
+          width={1440}
+          height={900}
+          loading="lazy"
           className="block h-full w-full"
           style={{ minWidth: containerRef.current ? `${containerRef.current.offsetWidth}px` : 'auto' }}
           draggable={false}

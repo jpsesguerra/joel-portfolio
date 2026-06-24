@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import { HugeiconsIcon } from '@hugeicons/react'
 import {
   WebDesign01Icon,
@@ -87,7 +88,7 @@ function IdentityBlock({ collapsed }: { collapsed: boolean }) {
     return (
       <a href="/" className="flex justify-center pt-4 pb-3 hover:opacity-80 transition-opacity duration-[150ms]">
         <div className="w-8 h-8 rounded-[3.2px] overflow-hidden">
-          <img src={JOEL_LOGO} alt="Joel Esguerra" className="w-full h-full object-cover" />
+          <Image src={JOEL_LOGO} alt="Joel Esguerra" width={48} height={48} priority className="w-full h-full object-cover" />
         </div>
       </a>
     )
@@ -95,7 +96,7 @@ function IdentityBlock({ collapsed }: { collapsed: boolean }) {
   return (
     <a href="/" className="h-[80px] flex items-center gap-[9px] px-3 border-b border-[var(--color-system-border)] hover:bg-[var(--color-system-white)] transition-colors duration-[150ms]">
       <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-[4px] lg:rounded-[4.8px] overflow-hidden flex-shrink-0">
-        <img src={JOEL_LOGO} alt="Joel Esguerra" className="w-full h-full object-cover" />
+        <Image src={JOEL_LOGO} alt="Joel Esguerra" width={48} height={48} priority className="w-full h-full object-cover" />
       </div>
       <div className="flex flex-col justify-center">
         <p className="text-[20px] leading-[28px] text-[var(--color-text-primary)] font-bold">Joel Esguerra</p>

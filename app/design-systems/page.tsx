@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -15,7 +16,7 @@ function FeatureBox({ iconSrc, title, description }: { iconSrc: string; title: s
   return (
     <div className="flex-1 min-w-0 border border-[var(--color-system-border)] rounded-[6px] p-3 flex flex-col gap-3 self-stretch">
       <div className="w-8 h-8 rounded-[6px] bg-[rgba(0,163,246,0.12)] flex items-center justify-center">
-        <img src={iconSrc} alt="" className="w-6 h-6" />
+        <Image src={iconSrc} alt="" width={24} height={24} loading="lazy" />
       </div>
       <div className="flex flex-col gap-[2px]">
         <p className="text-[14px] leading-[20px] font-medium text-[var(--color-text-secondary)] whitespace-nowrap">{title}</p>
@@ -93,7 +94,7 @@ function DesignSystemCard({ title, description, comingSoon, notionHref, caseStud
             >
               View in Notion
               <span className="opacity-60 flex items-center">
-                <img src={imgLinkExternal} alt="" className="w-5 h-5" />
+                <Image src={imgLinkExternal} alt="" width={20} height={20} loading="lazy" />
               </span>
             </a>
           )}

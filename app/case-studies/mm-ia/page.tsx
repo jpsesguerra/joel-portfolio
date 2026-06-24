@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import { motion, useInView, animate } from 'framer-motion'
 import { SideNav } from '@/components/navigation/SideNav'
@@ -87,7 +88,7 @@ export default function MmIaCaseStudy() {
               <section className="pb-10">
                 {/* Meta chips */}
                 <FadeUp className="flex items-center gap-3 mb-6">
-                  <img src={imgMmLogo} alt="Milk Moovement" className="w-5 h-5 object-contain opacity-70" />
+                  <Image src={imgMmLogo} alt="Milk Moovement" width={20} height={20} priority className="w-5 h-5 object-contain opacity-70" />
                   <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">Milk Moovement</span>
                   <span className="w-1 h-1 rounded-full bg-[var(--color-system-text-tertiary)] opacity-40" />
                   <span className="font-mono text-[11px] leading-[16px] uppercase text-[var(--color-system-text-tertiary)]">B2B</span>
@@ -105,7 +106,7 @@ export default function MmIaCaseStudy() {
                 {/* Hero image */}
                 <FadeUp delay={0.1} className="mb-6">
                   <div className="rounded-[12px] overflow-hidden w-full">
-                    <img src={imgHero} alt="Milk Moovement platform interface" className="w-full object-cover" />
+                    <Image src={imgHero} alt="Milk Moovement platform interface" width={1440} height={900} priority className="w-full object-cover" />
                   </div>
                 </FadeUp>
 
@@ -151,7 +152,7 @@ export default function MmIaCaseStudy() {
                 {/* Overview illustration */}
                 <FadeUp>
                   <div className="w-full overflow-hidden">
-                    <img src={imgOverview} alt="Dairy supply chain overview" className="w-full object-cover" />
+                    <Image src={imgOverview} alt="Dairy supply chain overview" width={1440} height={600} loading="lazy" className="w-full object-cover" />
                   </div>
                 </FadeUp>
               </section>
@@ -224,7 +225,7 @@ export default function MmIaCaseStudy() {
                     <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">User Interviews</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
-                        <img src={imgUserInterviews} alt="User Interviews" className="w-full h-full object-cover" />
+                        <Image src={imgUserInterviews} alt="User Interviews" width={600} height={220} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <p className="text-[11px] leading-[16px] text-[var(--color-system-text-primary)] tracking-[0.03px]">
                         With the help of Granola AI, I spoke with dozens of users—teammates, admins, and first-time explorers across General Admin, Transportation, Pay, and Membership roles.
@@ -233,7 +234,7 @@ export default function MmIaCaseStudy() {
                     <div className="flex-1 min-w-0 bg-[var(--color-system-white)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Existing UI Audit</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
-                        <img src={imgExistingUiAudit} alt="Existing UI Audit" className="w-full h-full object-cover" />
+                        <Image src={imgExistingUiAudit} alt="Existing UI Audit" width={600} height={220} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <p className="text-[11px] leading-[16px] text-[var(--color-system-text-primary)] tracking-[0.03px]">
                         Conducted exercises for each feature to understand mental models and expected groupings. I also analyzed existing navigation and page architecture for each of our major clients.
@@ -245,7 +246,7 @@ export default function MmIaCaseStudy() {
                     <div className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Datadog Analysis</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px]">
-                        <img src={imgDatadogAnalysis} alt="Datadog Analysis" className="w-full h-full object-cover" />
+                        <Image src={imgDatadogAnalysis} alt="Datadog Analysis" width={600} height={220} loading="lazy" className="w-full h-full object-cover" />
                       </div>
                       <p className="text-[11px] leading-[16px] text-[var(--color-system-text-primary)] tracking-[0.03px]">
                         Analyzed session recordings across multiple user segments for each region to identify pain points.
@@ -254,7 +255,7 @@ export default function MmIaCaseStudy() {
                     <div className="flex-1 min-w-0 bg-[var(--color-system-background-02)] border border-[var(--color-system-border)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                       <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Usage Patterns</p>
                       <div className="h-[220px] overflow-hidden rounded-[4px] bg-[#cde7fa]">
-                        <img src={imgUsagePatterns} alt="Usage Patterns" className="w-full h-full object-cover rounded-[5px]" />
+                        <Image src={imgUsagePatterns} alt="Usage Patterns" width={600} height={220} loading="lazy" className="w-full h-full object-cover rounded-[5px]" />
                       </div>
                       <p className="text-[11px] leading-[16px] text-[var(--color-system-text-primary)] tracking-[0.03px]">
                         Discovered power users maintained 3-4 open tabs and bookmarked frequently-used pages.
@@ -337,7 +338,7 @@ export default function MmIaCaseStudy() {
                 {/* Big nav redesign image */}
                 <FadeUp className="mb-6">
                   <div className="w-full overflow-hidden">
-                    <img src={imgNavRedesign} alt="Navigation redesign" className="w-full object-cover" />
+                    <Image src={imgNavRedesign} alt="Navigation redesign" width={1440} height={800} loading="lazy" className="w-full object-cover" />
                   </div>
                 </FadeUp>
 
@@ -356,7 +357,7 @@ export default function MmIaCaseStudy() {
                 <FadeUp className="mb-6">
                   <div className="bg-[rgba(0,163,246,0.12)] border border-[#00a3f6] rounded-[6px] px-6 py-5 flex flex-col md:flex-row gap-5 items-start md:items-center">
                     <div className="w-full md:w-[315px] h-[155px] border-2 border-[var(--color-system-text-primary)] overflow-hidden">
-                      <img src={imgCalloutScreenshot} alt="Navigation screenshot" className="w-full h-full object-cover" />
+                      <Image src={imgCalloutScreenshot} alt="Navigation screenshot" width={315} height={155} loading="lazy" className="w-full h-full object-cover" />
                     </div>
                     <div className="flex-1 min-w-0 text-[12px] leading-[18px] font-medium text-[var(--color-system-text-primary)] tracking-[0.06px]">
                       <p className="mb-3">The navigation redesign revealed something crucial: users didn't just need better navigation—they needed better tools for working with complex data. Transportation managers were analyzing hundreds of routes. Quality teams were reviewing thousands of test results. Payroll processors were reconciling massive datasets across multiple cooperatives.</p>
@@ -380,7 +381,7 @@ export default function MmIaCaseStudy() {
                   <div className="bg-[var(--color-system-white)] rounded-[12px] px-6 py-4 flex flex-col gap-5">
                     <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Unified Patterns &amp; Better Visibility</p>
                     <div className="w-full overflow-hidden rounded-[4px]">
-                      <img src={imgUnifiedPatterns} alt="Unified Patterns & Better Visibility" className="w-full object-cover" />
+                      <Image src={imgUnifiedPatterns} alt="Unified Patterns & Better Visibility" width={800} height={400} loading="lazy" className="w-full object-cover" />
                     </div>
                     <p className="text-[14px] leading-[22px] text-[var(--color-system-text-primary)]">
                       Optimized rendering for large datasets and implemented a responsive design with improved typography, status indicators and consistent interaction patterns across all tables.
@@ -393,7 +394,7 @@ export default function MmIaCaseStudy() {
                   <div className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                     <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Column Customization</p>
                     <div className="w-full overflow-hidden rounded-[4px]">
-                      <img src={imgColumnCustom} alt="Column Customization" className="w-full object-cover" />
+                      <Image src={imgColumnCustom} alt="Column Customization" width={600} height={350} loading="lazy" className="w-full object-cover" />
                     </div>
                     <p className="text-[14px] leading-[22px] text-[var(--color-system-text-primary)]">
                       Full column customization per-user for visibility and ordering
@@ -402,7 +403,7 @@ export default function MmIaCaseStudy() {
                   <div className="flex-1 min-w-0 bg-[var(--color-system-white)] rounded-[12px] px-6 py-4 flex flex-col gap-3">
                     <p className="text-[18px] leading-[26px] font-bold text-[var(--color-system-text-primary)]">Enhanced Filters and Date</p>
                     <div className="w-full overflow-hidden rounded-[4px]">
-                      <img src={imgEnhanceCustom} alt="Enhanced Filters and Date" className="w-full object-cover" />
+                      <Image src={imgEnhanceCustom} alt="Enhanced Filters and Date" width={600} height={350} loading="lazy" className="w-full object-cover" />
                     </div>
                     <p className="text-[14px] leading-[22px] text-[var(--color-system-text-primary)]">
                       Custom filter combinations on both columns and date ranges
@@ -509,13 +510,13 @@ export default function MmIaCaseStudy() {
                   </div>
                   <div className="flex items-start justify-between">
                     <a href="https://www.linkedin.com/in/kenny-harris-50b664163/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-                      <img src="/rec-kenny.jpg" alt="Kenny Harris" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
+                      <Image src="/rec-kenny.jpg" alt="Kenny Harris" width={40} height={40} loading="lazy" className="w-10 h-10 rounded-full object-cover flex-shrink-0" />
                       <div>
                         <p className="text-[14px] leading-[20px] font-bold text-[var(--color-text-primary)]">Kenny Harris</p>
                         <p className="text-[12px] leading-[18px] text-[var(--color-text-primary)]">Sr. Enterprise Account Executive</p>
                       </div>
                     </a>
-                    <img src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" className="h-10 w-[77px] object-contain" />
+                    <Image src="/assets/90abaedd-e76b-4630-ac8b-5f063ecad828.png" alt="Spellbook" width={77} height={40} loading="lazy" className="h-10 w-[77px] object-contain" />
                   </div>
                 </div>
               </section>
@@ -523,7 +524,7 @@ export default function MmIaCaseStudy() {
               {/* Moorice mascot GIF */}
               <FadeUp>
                 <div className="py-6 flex flex-col items-center gap-3">
-                  <img src="/Moorice_Dab_output.gif" alt="Moorice celebrating" className="w-[50%]" />
+                  <Image src="/Moorice_Dab_output.gif" alt="Moorice celebrating" width={400} height={400} loading="lazy" unoptimized className="w-[50%] h-auto" />
                   <p className="font-mono text-[14px] leading-[22px] uppercase text-[var(--color-text-secondary)] text-center">Thank You very Moo-ch for reading</p>
                 </div>
               </FadeUp>
