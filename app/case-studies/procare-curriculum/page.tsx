@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { SideNav } from '@/components/navigation/SideNav'
 import { Header } from '@/components/navigation/Header'
 import { MobileNav } from '@/components/navigation/MobileNav'
@@ -40,6 +40,48 @@ function ClickToPlayVideo({ thumbnailSrc, embedSrc }: { thumbnailSrc: string; em
       <div style={wrapStyle}>
         <iframe
           src={`${embedSrc}?autoplay=1`}
+          allow="autoplay; fullscreen"
+          frameBorder={0}
+          allowFullScreen
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', borderRadius: '20px' }}
+        />
+      </div>
+    )
+  }
+  return (
+    <div style={{ ...wrapStyle, cursor: 'pointer' }} onClick={() => setPlaying(true)}>
+      <img src={thumbnailSrc} alt="Video thumbnail" style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
+      <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ width: 80, height: 80, background: 'rgba(0,0,0,0.6)', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+          <div style={{ width: 0, height: 0, borderLeft: '22px solid white', borderTop: '14px solid transparent', borderBottom: '14px solid transparent', marginLeft: 6 }} />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function ClickToPlayVideoTrimmed({ thumbnailSrc, embedSrc, startTime, clipDuration }: {
+  thumbnailSrc: string; embedSrc: string; startTime: number; clipDuration: number
+}) {
+  const [playing, setPlaying] = useState(false)
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  useEffect(() => {
+    if (playing) {
+      timerRef.current = setTimeout(() => setPlaying(false), clipDuration * 1000)
+    }
+    return () => { if (timerRef.current) clearTimeout(timerRef.current) }
+  }, [playing, clipDuration])
+
+  const wrapStyle: React.CSSProperties = {
+    position: 'relative', paddingBottom: '56.25%', height: 0,
+    overflow: 'hidden', borderRadius: '20px', boxShadow: '0 8px 40px rgba(0,0,0,0.12)',
+  }
+  if (playing) {
+    return (
+      <div style={wrapStyle}>
+        <iframe
+          src={`${embedSrc}?autoplay=1&time=${startTime}`}
           allow="autoplay; fullscreen"
           frameBorder={0}
           allowFullScreen
@@ -214,6 +256,23 @@ export default function ProcareCurriculumCaseStudy() {
                       </div>
                     ))}
                   </div>
+                </FadeUp>
+              </section>
+
+              {/* ══ TL;DR Video ══════════════════════════════════════════════ */}
+              <section className="py-10">
+                <FadeUp className="mb-4">
+                  <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-brand-primary)] mb-2">TL;DR — Watch it in action</p>
+                  <h2 className="text-[28px] leading-[36px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.3px] mb-2">See the product demo before diving in</h2>
+                  <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] max-w-[600px]">Short on time? Here's a 2-minute clip from the live industry webinar — watch the product introduced by the CEO of our curriculum partner, then handed off to me for the live demo.</p>
+                </FadeUp>
+                <FadeUp>
+                  <ClickToPlayVideoTrimmed
+                    thumbnailSrc="https://res.cloudinary.com/du0witbcr/image/upload/v1775758811/Screenshot_2026-04-09_at_2.18.06_PM_bms8gm.png"
+                    embedSrc="https://fast.wistia.net/embed/iframe/sk9ph8l8qa"
+                    startTime={729}
+                    clipDuration={127}
+                  />
                 </FadeUp>
               </section>
 
