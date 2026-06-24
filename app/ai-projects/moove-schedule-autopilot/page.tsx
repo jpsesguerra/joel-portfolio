@@ -899,7 +899,7 @@ export default function MooveCaseStudy() {
                   whileInView="visible"
                   viewport={viewOpts}
                   variants={stagger}
-                  className="flex flex-wrap gap-5 mb-10"
+                  className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10"
                 >
                   {[
                     { metric: '30–40%',  label: 'Reduction in manual scheduling time', subLabel: 'CDI team — first week of deployment' },
@@ -907,7 +907,7 @@ export default function MooveCaseStudy() {
                     { metric: '92%',  label: 'Scheduler satisfaction score',         subLabel: 'Post-launch survey, n=12' },
                     { metric: '3',    label: 'Co-op clients onboarded',              subLabel: 'CDI, DFO, and UDA' },
                   ].map((card, i) => (
-                    <motion.div key={i} variants={fadeUp}>
+                    <motion.div key={i} variants={fadeUp} className="flex">
                       <ResultCard metric={card.metric} label={card.label} subLabel={card.subLabel} />
                     </motion.div>
                   ))}
