@@ -155,6 +155,20 @@ export default function MmIaCaseStudy() {
                 </FadeUp>
               </section>
 
+              {/* ══ TL;DR Video ══════════════════════════════════════════════ */}
+              <section className="py-10">
+                <FadeUp className="mb-4">
+                  <p className="font-mono text-[10px] leading-[16px] uppercase text-[var(--color-brand-primary)] mb-2">TL;DR — Watch it in action</p>
+                  <h2 className="text-[28px] leading-[36px] font-bold text-[var(--color-system-text-primary)] tracking-[-0.3px] mb-2">See the redesigned navigation before diving in</h2>
+                  <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] max-w-[600px]">Short on time? Here's a quick walkthrough of the final navigation redesign — the full case study below explains the research and decisions behind it.</p>
+                </FadeUp>
+                <FadeUp>
+                  <div className="w-full rounded-[8px] overflow-hidden border border-[var(--color-system-border)]" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
+                    <iframe src="https://www.loom.com/embed/f6e1ad363d384fdc9545e6c5ff3f996a" frameBorder={0} allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />
+                  </div>
+                </FadeUp>
+              </section>
+
               {/* ══ 01 / PROBLEM + APPROACH ═════════════════════════════════ */}
               <section id="problem" className="py-10">
                 <FadeUp className="mb-6">
