@@ -10,6 +10,7 @@ import { Breadcrumb } from '@/components/navigation/Breadcrumb'
 import { Footer } from '@/components/Footer'
 import { ResultCard } from '@/components/case-study/ResultCard'
 import { FindingRow } from '@/components/case-study/FindingRow'
+import { LoomEmbed } from '@/components/LoomEmbed'
 
 // ─── Assets (local — downloaded from Figma) ───────────────────────────────────
 const imgMmLogo           = '/mm-logo.png'
@@ -163,9 +164,7 @@ export default function MmIaCaseStudy() {
                   <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] max-w-[600px]">Short on time? Here's a quick walkthrough of the final navigation redesign — the full case study below explains the research and decisions behind it.</p>
                 </FadeUp>
                 <FadeUp>
-                  <div className="w-full rounded-[8px] overflow-hidden border border-[var(--color-system-border)]" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                    <iframe src="https://www.loom.com/embed/f6e1ad363d384fdc9545e6c5ff3f996a" frameBorder={0} allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />
-                  </div>
+                  <LoomEmbed src="https://www.loom.com/embed/f6e1ad363d384fdc9545e6c5ff3f996a" className="rounded-[8px] border border-[var(--color-system-border)]" />
                 </FadeUp>
               </section>
 
@@ -451,13 +450,7 @@ export default function MmIaCaseStudy() {
 
                 {/* Loom video */}
                 <FadeUp>
-                  <div className="w-full aspect-video rounded-[8px] overflow-hidden">
-                    <iframe
-                      src="https://www.loom.com/embed/f6e1ad363d384fdc9545e6c5ff3f996a"
-                      allowFullScreen
-                      className="w-full h-full border-0"
-                    />
-                  </div>
+                  <LoomEmbed src="https://www.loom.com/embed/f6e1ad363d384fdc9545e6c5ff3f996a" className="rounded-[8px]" />
                 </FadeUp>
               </section>
 

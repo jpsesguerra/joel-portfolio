@@ -13,6 +13,7 @@ import { ResultCard } from '@/components/case-study/ResultCard'
 import { LearningRow } from '@/components/case-study/LearningRow'
 import { FindingRow } from '@/components/case-study/FindingRow'
 import { DataTableRow } from '@/components/case-study/DataTableRow'
+import { LoomEmbed } from '@/components/LoomEmbed'
 import { BeforeAfterSlider } from '@/components/BeforeAfterSlider'
 
 // ─── Assets (Figma MCP URLs — valid 7 days from build) ───────────────────────
@@ -328,9 +329,7 @@ export default function MooveCaseStudy() {
                   <p className="text-[14px] leading-[22px] text-[var(--color-system-text-secondary)] max-w-[600px]">Short on time? Here's a 4-minute walkthrough of the final Autopilot interface — the full case study below explains the research and decisions behind it.</p>
                 </FadeUp>
                 <FadeUp>
-                  <div className="w-full rounded-[8px] overflow-hidden border border-[var(--color-system-border)]" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                    <iframe src="https://www.loom.com/embed/6b884a33278c41eeb25d76f9ec3dfb04" frameBorder={0} allowFullScreen style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }} />
-                  </div>
+                  <LoomEmbed src="https://www.loom.com/embed/6b884a33278c41eeb25d76f9ec3dfb04" className="rounded-[8px] border border-[var(--color-system-border)]" />
                 </FadeUp>
               </section>
 
@@ -864,14 +863,7 @@ export default function MooveCaseStudy() {
                           <img src={imgFulfillmentChart} alt="Fulfillment supply vs demand chart" className="w-full" />
                         </div>
                         {/* Loom demo */}
-                        <div className="w-full rounded-lg overflow-hidden border border-[var(--color-system-border)]" style={{ position: 'relative', paddingBottom: '56.25%', height: 0 }}>
-                          <iframe
-                            src="https://www.loom.com/embed/6b884a33278c41eeb25d76f9ec3dfb04"
-                            frameBorder="0"
-                            allowFullScreen
-                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                          />
-                        </div>
+                        <LoomEmbed src="https://www.loom.com/embed/6b884a33278c41eeb25d76f9ec3dfb04" className="rounded-lg border border-[var(--color-system-border)]" />
                       </div>
                     </div>
                   </div>
