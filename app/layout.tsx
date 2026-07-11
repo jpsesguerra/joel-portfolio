@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Azeret_Mono } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
 import './globals.css'
 import { ThemeProvider } from '@/components/ThemeProvider'
 
@@ -29,6 +30,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans bg-[var(--color-system-background)] text-[var(--color-system-text-primary)] antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
+      {process.env.NEXT_PUBLIC_GA_ID && (
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
+      )}
     </html>
   )
 }
