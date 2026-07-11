@@ -42,7 +42,7 @@ export function SideNav() {
       {/* Full nav — lg+ */}
       <nav
         className={cn(
-          'hidden lg:flex flex-shrink-0 sticky top-0 h-screen flex-col border-r border-[var(--color-system-border)] bg-[var(--color-system-background)] relative transition-[width] duration-300 ease-in-out',
+          'hidden lg:flex flex-shrink-0 sticky top-0 h-screen flex-col border-r border-[var(--color-system-border)] bg-[var(--color-system-background)] transition-[width] duration-300 ease-in-out',
           collapsed ? 'w-20' : 'w-60'
         )}
       >
@@ -147,12 +147,12 @@ function CollapseToggle({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       onClick={onToggle}
       aria-label={collapsed ? 'Expand sidebar' : 'Collapse sidebar'}
       aria-pressed={collapsed}
-      className="group/toggle absolute -right-3 top-1/2 -translate-y-1/2 h-24 w-6 flex items-center justify-center cursor-pointer z-20"
+      className="group/toggle absolute -right-[18px] top-1/2 -translate-y-1/2 h-24 w-6 flex items-center justify-center cursor-pointer z-[70]"
     >
       <span
         aria-hidden
         className={cn(
-          'h-8 w-px rounded-full bg-[var(--color-system-border)] transition-transform duration-200 ease-out group-hover/toggle:bg-[var(--color-text-tertiary)]',
+          'h-8 w-0.5 rounded-full bg-[var(--color-system-border)] transition-transform duration-200 ease-out group-hover/toggle:bg-[var(--color-text-tertiary)]',
           collapsed ? 'group-hover/toggle:translate-x-1' : 'group-hover/toggle:-translate-x-1'
         )}
       />
