@@ -18,6 +18,8 @@ const azeretMono = Azeret_Mono({
   display: 'swap',
 })
 
+const GA_MEASUREMENT_ID = 'G-5EZT3JT9L0'
+
 export const metadata: Metadata = {
   title: 'Joel Esguerra — Product Designer',
   description: 'Senior product designer specializing in AI-powered products, design systems, and data-driven experiences.',
@@ -30,9 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="font-sans bg-[var(--color-system-background)] text-[var(--color-system-text-primary)] antialiased">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
-      {process.env.NEXT_PUBLIC_GA_ID && (
-        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
-      )}
+      <GoogleAnalytics gaId={GA_MEASUREMENT_ID} />
     </html>
   )
 }
